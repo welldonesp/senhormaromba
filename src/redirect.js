@@ -1,9 +1,13 @@
 import produtos from './produtos.json' assert { type: 'json' };
 
 export async function redirect(produto, loja) {
-  if (!produtos[produto]) return null;
-  return loja
-    ? produtos[produto].find(p => p.loja === loja)?.url || produtos[produto][0].url
-    : produtos[produto][0].url;
+  for (const secao of Object.values(produtos)) {
+    if (secao[produto]) {
+      const item = loja
+        ? secao[produto].find(p => p.loja === loja) || secao[produto][0]
+        : secao[produto][0];
+      return item.url;
+    }
+  }
+  return null;
 }
-
