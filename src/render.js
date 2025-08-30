@@ -8,15 +8,13 @@ function capitalizeWords(str) {
 }
 
 export async function renderPage() {
-  const cssUrl = 'https://raw.githubusercontent.com/welldonesp/senhormaromba/main/src/style.css';
-
   let html = `
     <!DOCTYPE html>
     <html lang="pt-BR">
     <head>
       <meta charset="UTF-8">
       <title>Loja Senhor Maromba</title>
-      <link rel="stylesheet" href="${cssUrl}">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/welldonesp/senhormaromba/src/style.css">
     </head>
     <body>
       <h1>🔥 Loja Senhor Maromba</h1>
