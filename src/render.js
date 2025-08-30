@@ -8,7 +8,7 @@ function capitalizeWords(str) {
 }
 
 export async function renderPage() {
-  const cssUrl = './style.css';
+  const cssUrl = 'https://raw.githubusercontent.com/welldonesp/senhormaromba/main/src/style.css';
 
   let html = `
     <!DOCTYPE html>
