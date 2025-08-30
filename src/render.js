@@ -18,6 +18,7 @@ export async function renderPage() {
       <link rel="stylesheet" href="https://welldonesp.github.io/senhormaromba/src/style.css?v=1">
     </head>
     <body>
+      <img src="https://welldonesp.github.io/senhormaromba/src/logotipo.png" alt="Logotipo Senhor Maromba" class="logo">
       <h1>🔥 Loja Senhor Maromba</h1>
       <p>Produtos recomendados e testados nos treinos 💪</p>
   `;
