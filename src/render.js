@@ -1,5 +1,6 @@
 import produtos from './produtos.json' assert { type: 'json' };
 
+// Função para colocar as iniciais de cada palavra em maiúscula
 function capitalizeWords(str) {
   return str
     .split('-')
@@ -21,16 +22,25 @@ export async function renderPage() {
       <p>Produtos recomendados e testados nos treinos 💪</p>
   `;
 
-  for (const [nome, lojas] of Object.entries(produtos)) {
-    const nomeFormatado = capitalizeWords(nome.replace(/-/g, " "));
-    const descricao = lojas[0]?.desc || '';
-    
-    html += `<div class="produto"><h2>${nomeFormatado}: ${descricao}</h2>`;
-    html += `<div class="links">`;
-    for (const l of lojas) {
-      html += `<a href="/${nome}/${l.loja}">${l.loja}</a>`;
+  // Percorre cada seção do JSON
+  for (const [secaoNome, secaoProdutos] of Object.entries(produtos)) {
+    html += `<h2 class="secao">${secaoNome}</h2>`; // Título da seção
+
+    // Percorre cada produto dentro da seção
+    for (const [produtoNome, lojas] of Object.entries(secaoProdutos)) {
+      const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
+      const descricao = lojas[0]?.desc || '';
+
+      html += `<div class="produto"><h3>${nomeFormatado}: ${descricao}</h3>`;
+      html += `<div class="links">`;
+
+      // Links de cada loja
+      for (const l of lojas) {
+        html += `<a href="/${produtoNome}/${l.loja}">${l.loja}</a>`;
+      }
+
+      html += `</div></div>`;
     }
-    html += `</div></div>`;
   }
 
   html += `<footer>Todos os links são afiliados, o que me ajuda a continuar produzindo conteúdo.<br>
