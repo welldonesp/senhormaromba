@@ -3,15 +3,15 @@
     "strap-tradicional": {
       "desc": "Ideal para iniciantes e treinos de puxada moderada.",
       "lojas": [
-        { "loja": "amazon", "url": "https://amzn.to/4mGRlAM" },
-        { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/2fU4MVm" }
+        { "loja": "Amazon", "url": "https://amzn.to/4mGRlAM" },
+        { "loja": "MercadoLivre", "url": "https://mercadolivre.com/sec/2fU4MVm" }
       ]
     },
     "strap-figure-eight": {
       "desc": "Perfeito para pegadas pesadas e levantamento intenso.",
       "lojas": [
-        { "loja": "amazon", "url": "https://amzn.to/41pBoXa" },
-        { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/1PHYoZN" }
+        { "loja": "Amazon", "url": "https://amzn.to/41pBoXa" },
+        { "loja": "MercadoLivre", "url": "https://mercadolivre.com/sec/1PHYoZN" }
       ]
     }
   },
@@ -19,8 +19,8 @@
     "luvas-treino-premium": {
       "desc": "Proteção extra e melhor aderência.",
       "lojas": [
-        { "loja": "amazon", "url": "https://amzn.to/3HMLSt0" },
-        { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/2Yq1unZ" }
+        { "loja": "Amazon", "url": "https://amzn.to/3HMLSt0" },
+        { "loja": "MercadoLivre", "url": "https://mercadolivre.com/sec/2Yq1unZ" }
       ]
     }
   },
@@ -28,8 +28,8 @@
     "magnesio-liquido": {
       "desc": "Evita escorregões e melhora seu desempenho.",
       "lojas": [
-        { "loja": "amazon", "url": "https://amzn.to/3HSQTQL" },
-        { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
+        { "loja": "Amazon", "url": "https://amzn.to/3HSQTQL" },
+        { "loja": "MercadoLivre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
       ]
     }
   }
