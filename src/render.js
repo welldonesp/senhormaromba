@@ -1,5 +1,12 @@
 import produtos from './produtos.json' assert { type: 'json' };
 
+function capitalizeWords(str) {
+  return str
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
 export async function renderPage() {
   let html = `
     <!DOCTYPE html>
@@ -22,11 +29,11 @@ export async function renderPage() {
   `;
 
   for (const [nome, lojas] of Object.entries(produtos)) {
-    // Pega a descrição do primeiro item, assume que todas são iguais
+    const nomeFormatado = capitalizeWords(nome.replace(/-/g, " "));
     const descricao = lojas[0]?.desc || '';
     
     // Nome do produto
-    html += `<div class="produto"><h2>${nome.replace(/-/g, " ")} - ${descricao}</h2>`;
+    html += `<div class="produto"><h2>${nomeFormatado}: ${descricao}</h2>`;
 
     // Links para cada loja
     html += `<div class="links">`;
