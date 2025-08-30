@@ -1,5 +1,5 @@
 export async function redirect(produto, loja) {
-  const res = await fetch('https://raw.githubusercontent.com/seuusuario/affiliates/main/produtos.json');
+  const res = await fetch('https://raw.githubusercontent.com/welldonesp/senhormaromba/main/produtos.json');
   const produtos = await res.json();
 
   if (!produtos[produto]) return null;
