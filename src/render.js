@@ -30,15 +30,15 @@ export async function renderPage() {
     html += `<h2 class="secao">${secaoNome}</h2>`; // Título da seção
 
     // Percorre cada produto dentro da seção
-    for (const [produtoNome, lojas] of Object.entries(secaoProdutos)) {
+    for (const [produtoNome, produtoDados] of Object.entries(secaoProdutos)) {
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
-      const descricao = lojas[0]?.desc || '';
+      const descricao = produtoDados.desc || '';
 
       html += `<div class="produto"><h3>${nomeFormatado}: ${descricao}</h3>`;
       html += `<div class="links">`;
 
       // Links de cada loja
-      for (const l of lojas) {
+      for (const l of produtoDados.lojas) {
         html += `<a href="/${produtoNome}/${l.loja}">${l.loja}</a>`;
       }
 
