@@ -1,24 +1,36 @@
 {
   "Straps": {
-    "strap-tradicional": [
-      { "loja": "amazon", "url": "https://amzn.to/4mGRlAM", "desc": "Ideal para iniciantes e treinos de puxada moderada." },
-      { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/2yvvbDJ", "desc": "Ideal para iniciantes e treinos de puxada moderada." }
-    ],
-    "strap-figure-eight": [
-      { "loja": "amazon", "url": "https://amzn.to/41pBoXa", "desc": "Perfeito para pegadas pesadas e levantamento intenso." },
-      { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/12emDCu", "desc": "Perfeito para pegadas pesadas e levantamento intenso." }
-    ]
+    "strap-tradicional": {
+      "desc": "Ideal para iniciantes e treinos de puxada moderada.",
+      "lojas": [
+        { "loja": "amazon", "url": "https://amzn.to/4mGRlAM" },
+        { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/2yvvbDJ" }
+      ]
+    },
+    "strap-figure-eight": {
+      "desc": "Perfeito para pegadas pesadas e levantamento intenso.",
+      "lojas": [
+        { "loja": "amazon", "url": "https://amzn.to/41pBoXa" },
+        { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/12emDCu" }
+      ]
+    }
   },
   "Luvas": {
-    "luvas-treino-premium": [
-      { "loja": "amazon", "url": "https://amzn.to/3HMLSt0", "desc": "Proteção extra e melhor aderência." },
-      { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/2Yq1unZ", "desc": "Proteção extra e melhor aderência." }
-    ]
+    "luvas-treino-premium": {
+      "desc": "Proteção extra e melhor aderência.",
+      "lojas": [
+        { "loja": "amazon", "url": "https://amzn.to/3HMLSt0" },
+        { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/2Yq1unZ" }
+      ]
+    }
   },
   "Diversos": {
-    "magnesio-liquido": [
-      { "loja": "amazon", "url": "https://amzn.to/3HSQTQL", "desc": "Evita escorregões e melhora seu desempenho." },
-      { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/1SwaLJf", "desc": "Evita escorregões e melhora seu desempenho." }
-    ]
+    "magnesio-liquido": {
+      "desc": "Evita escorregões e melhora seu desempenho.",
+      "lojas": [
+        { "loja": "amazon", "url": "https://amzn.to/3HSQTQL" },
+        { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
+      ]
+    }
   }
 }
