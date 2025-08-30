@@ -22,10 +22,18 @@ export async function renderPage() {
   `;
 
   for (const [nome, lojas] of Object.entries(produtos)) {
+    // Nome do produto
     html += `<div class="produto"><h2>${nome.replace(/-/g, " ")}</h2>`;
+
+    // Descrição única do produto (pega da primeira loja, ou do objeto principal)
+    if (lojas[0].desc) {
+      html += `<p>${lojas[0].desc}</p>`;
+    }
+
+    // Links para cada loja
     html += `<div class="links">`;
     for (const l of lojas) {
-      html += `<a href="/${nome}/${l.loja}">${l.loja}</a> - ${l.desc}`;
+      html += `<a href="/${nome}/${l.loja}">${l.loja}</a>`;
     }
     html += `</div></div>`;
   }
