@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  padding: 20px;
+}
+
+h1 {
+  color: #f33;
+}
+
+.produto {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.links a {
+  margin-right: 10px;
+  color: #4af;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.9em;
+  text-align: center;
+  display: block;
+}
