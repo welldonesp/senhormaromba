@@ -1,5 +1,5 @@
 {
-  "Straps:" {
+  "Straps": {
     "strap-tradicional": [
       { "loja": "amazon", "url": "https://amzn.to/4mGRlAM", "desc": "Ideal para iniciantes e treinos de puxada moderada." },
       { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/2yvvbDJ", "desc": "Ideal para iniciantes e treinos de puxada moderada." }
@@ -9,13 +9,13 @@
       { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/12emDCu", "desc": "Perfeito para pegadas pesadas e levantamento intenso." }
     ]
   },
-  "Luvas:" {
+  "Luvas": {
     "luvas-treino-premium": [
       { "loja": "amazon", "url": "https://amzn.to/3HMLSt0", "desc": "Proteção extra e melhor aderência." },
       { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/2Yq1unZ", "desc": "Proteção extra e melhor aderência." }
     ]
   },
-  "Diversos:" {
+  "Diversos": {
     "magnesio-liquido": [
       { "loja": "amazon", "url": "https://amzn.to/3HSQTQL", "desc": "Evita escorregões e melhora seu desempenho." },
       { "loja": "mercadolivre", "url": "https://mercadolivre.com/sec/1SwaLJf", "desc": "Evita escorregões e melhora seu desempenho." }
