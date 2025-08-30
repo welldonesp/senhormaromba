@@ -15,7 +15,7 @@ export async function renderPage() {
     <head>
       <meta charset="UTF-8">
       <title>Loja Senhor Maromba</title>
-      <link rel="stylesheet" href="https://welldonesp.github.io/senhormaromba/src/style.css?v=1">
+      <link rel="stylesheet" href="https://welldonesp.github.io/senhormaromba/src/style.css?v=2">
     </head>
     <body>
       <div class="header">
