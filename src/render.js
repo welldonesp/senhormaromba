@@ -23,7 +23,7 @@ export async function renderPage() {
 
   for (const [nome, lojas] of Object.entries(produtos)) {
     // Nome do produto
-    html += `<div class="produto"><h2>${nome.replace(/-/g, " ")} - {desc}</h2>`;
+    html += `<div class="produto"><h2>${nome.replace(/-/g, " ")} - ${desc}</h2>`;
 
     // Links para cada loja
     html += `<div class="links">`;
