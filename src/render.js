@@ -1,19 +1,37 @@
+import produtos from './produtos.json' assert { type: 'json' };
+
 export async function renderPage() {
-  const res = await fetch('https://raw.githubusercontent.com/welldonesp/senhormaromba/main/produtos.json');
-  const produtos = await res.json();
+  let html = `
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8">
+      <title>Loja Senhor Maromba</title>
+      <style>
+        body { font-family: Arial, sans-serif; background: #111; color: #eee; padding: 20px; }
+        h1 { color: #f33; }
+        .produto { margin-bottom: 20px; padding: 10px; border-bottom: 1px solid #444; }
+        .links a { margin-right: 10px; color: #4af; text-decoration: none; }
+        .links a:hover { text-decoration: underline; }
+        footer { margin-top: 50px; font-size: 0.9em; text-align: center; display:block; }
+      </style>
+    </head>
+    <body>
+      <h1>🔥 Loja Senhor Maromba</h1>
+      <p>Produtos recomendados e testados nos treinos 💪</p>
+  `;
 
-  let html = `<html><head><meta charset="UTF-8"><title>Loja Senhor Maromba</title></head><body>`;
-  html += `<h1>🔥 Loja Senhor Maromba</h1>`;
-
-  for (const [nome, info] of Object.entries(produtos)) {
-    html += `<div><h2>${nome.replace(/-/g,' ')}</h2><p>${info.desc}</p>`;
-    for (const [loja, url] of Object.entries(info.links)) {
-      html += `<a href="/${nome}/${loja}">${loja}</a> `;
+  for (const [nome, lojas] of Object.entries(produtos)) {
+    html += `<div class="produto"><h2>${nome.replace(/-/g, " ")}</h2>`;
+    html += `<div class="links">`;
+    for (const l of lojas) {
+      html += `<a href="/${nome}/${l.loja}">${l.loja}</a> - ${l.desc}`;
     }
-    html += `</div>`;
+    html += `</div></div>`;
   }
 
-  html += `<footer>Todos os links são afiliados. Conheça o canal <a href="https://www.youtube.com/@SenhorMaromba">Senhor Maromba</a></footer>`;
+  html += `<footer>Todos os links são afiliados, o que me ajuda a continuar produzindo conteúdo.<br>
+           Conheça o canal: <a href="https://www.youtube.com/@SenhorMaromba" target="_blank">Senhor Maromba</a></footer>`;
   html += `</body></html>`;
 
   return html;
