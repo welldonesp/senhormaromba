@@ -15,16 +15,20 @@ h1 {
   border-bottom: 1px solid #444;
 }
 
-.links a {
-  margin-right: 10px;
-}
-
-.links a:hover {
+.links {
+  display: flex;
+  flex-wrap: wrap;  /* Quebra linha se não couber */
+  gap: 10px;        /* Espaço entre os links */
+  margin-top: 5px;  /* Espaço entre o nome do produto e os links */
 }
 
 a {
   color: #4af;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 footer {
