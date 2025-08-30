@@ -1,4 +1,4 @@
-import produtos from './produtos.json' assert { type: 'json' };
+import produtos from '../produtos.json' assert { type: 'json' };
 
 export function renderPage() {
   let html = `
