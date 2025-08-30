@@ -1,0 +1,12 @@
+name = "loja-senhormaromba"
+type = "javascript"
+account_id = "SEU_ACCOUNT_ID"
+workers_dev = true
+compatibility_date = "2025-08-30"
+
+[build]
+command = "npm install"
+
+[build.upload]
+format = "service-worker"
+main = "src/index.js"
