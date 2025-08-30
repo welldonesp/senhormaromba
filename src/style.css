@@ -17,12 +17,14 @@ h1 {
 
 .links a {
   margin-right: 10px;
-  color: #4af;
-  text-decoration: none;
 }
 
 .links a:hover {
-  text-decoration: underline;
+}
+
+a {
+  color: #4af;
+  text-decoration: none;
 }
 
 footer {
