@@ -23,12 +23,7 @@ export async function renderPage() {
 
   for (const [nome, lojas] of Object.entries(produtos)) {
     // Nome do produto
-    html += `<div class="produto"><h2>${nome.replace(/-/g, " ")}</h2>`;
-
-    // Descrição única do produto (pega da primeira loja, ou do objeto principal)
-    if (lojas[0].desc) {
-      html += `<p>${lojas[0].desc}</p>`;
-    }
+    html += `<div class="produto"><h2>${nome.replace(/-/g, " ")} - {desc}</h2>`;
 
     // Links para cada loja
     html += `<div class="links">`;
