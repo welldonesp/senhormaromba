@@ -22,6 +22,9 @@ export async function renderPage() {
   `;
 
   for (const [nome, lojas] of Object.entries(produtos)) {
+    // Pega a descrição do primeiro item, assume que todas são iguais
+    const descricao = lojas[0]?.desc || '';
+    
     // Nome do produto
     html += `<div class="produto"><h2>${nome.replace(/-/g, " ")} - ${descricao}</h2>`;
 
