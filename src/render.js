@@ -8,20 +8,15 @@ function capitalizeWords(str) {
 }
 
 export async function renderPage() {
+  const cssUrl = 'https://raw.githubusercontent.com/seuusuario/senhormaromba-worker/main/src/style.css';
+
   let html = `
     <!DOCTYPE html>
     <html lang="pt-BR">
     <head>
       <meta charset="UTF-8">
       <title>Loja Senhor Maromba</title>
-      <style>
-        body { font-family: Arial, sans-serif; background: #111; color: #eee; padding: 20px; }
-        h1 { color: #f33; }
-        .produto { margin-bottom: 20px; padding: 10px; border-bottom: 1px solid #444; }
-        .links a { margin-right: 10px; color: #4af; text-decoration: none; }
-        .links a:hover { text-decoration: underline; }
-        footer { margin-top: 50px; font-size: 0.9em; text-align: center; display:block; }
-      </style>
+      <link rel="stylesheet" href="${cssUrl}">
     </head>
     <body>
       <h1>🔥 Loja Senhor Maromba</h1>
@@ -32,10 +27,7 @@ export async function renderPage() {
     const nomeFormatado = capitalizeWords(nome.replace(/-/g, " "));
     const descricao = lojas[0]?.desc || '';
     
-    // Nome do produto
     html += `<div class="produto"><h2>${nomeFormatado}: ${descricao}</h2>`;
-
-    // Links para cada loja
     html += `<div class="links">`;
     for (const l of lojas) {
       html += `<a href="/${nome}/${l.loja}">${l.loja}</a>`;
