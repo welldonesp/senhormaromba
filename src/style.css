@@ -10,10 +10,15 @@ h1 {
   color: #f33;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* espaço entre logotipo e título */
+}
+
 .logo {
-  width: 200px;
-  display: block;
-  margin-bottom: 20px;
+  width: 80px; /* ajuste o tamanho que desejar */
+  height: auto;
 }
 
 .produto {
