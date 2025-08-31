@@ -13,7 +13,7 @@ const ASSETS_BASE = 'https://welldonesp.github.io/senhormaromba/assets';
 
 // Função para gerar URL do ícone da loja
 function lojaIcon(loja) {
-  const nomeArquivo = loja.toLowerCase().replace(/\s+/g, '') + '.png';
+  const nomeArquivo = loja.toLowerCase() + '.png';
   return `${ASSETS_BASE}/lojas/${nomeArquivo}`;
 }
 
