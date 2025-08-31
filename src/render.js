@@ -8,14 +8,13 @@ function capitalizeWords(str) {
     .join(' ');
 }
 
-// Mapeia o nome da loja para o ícone correspondente
+// Radical das pastas para facilitar manutenção
+const ASSETS_BASE = 'https://welldonesp.github.io/senhormaromba/assets';
+
+// Função para gerar URL do ícone da loja
 function lojaIcon(loja) {
-  const icons = {
-    amazon: 'https://welldonesp.github.io/senhormaromba/assets/lojas/amazon.png',
-    mercadolivre: 'https://welldonesp.github.io/senhormaromba/assets/lojas/mercadolivre.png',
-    aliexpress: 'https://welldonesp.github.io/senhormaromba/assets/lojas/aliexpress.png'
-  };
-  return icons[loja.toLowerCase()] || 'https://welldonesp.github.io/senhormaromba/assets/lojas/placeholder.png';
+  const nomeArquivo = loja.toLowerCase().replace(/\s+/g, '') + '.png';
+  return `${ASSETS_BASE}/lojas/${nomeArquivo}`;
 }
 
 export async function renderPage() {
@@ -25,11 +24,11 @@ export async function renderPage() {
     <head>
       <meta charset="UTF-8">
       <title>Loja Senhor Maromba</title>
-      <link rel="stylesheet" href="https://welldonesp.github.io/senhormaromba/src/style.css?v=4">
+      <link rel="stylesheet" href="${ASSETS_BASE}/../src/style.css?v=4">
     </head>
     <body>
       <div class="header">
-        <img src="https://welldonesp.github.io/senhormaromba/assets/logotipo.png" alt="Logotipo Senhor Maromba" class="logo">
+        <img src="${ASSETS_BASE}/logotipo.png" alt="Logotipo Senhor Maromba" class="logo">
         <h1>Loja Senhor Maromba 🔥</h1>
       </div>
       <p>Produtos recomendados e testados nos treinos 💪</p>
@@ -45,8 +44,8 @@ export async function renderPage() {
       html += `
       <div class="produto">
         <div class="produto-container">
-          <img class="produto-img" src="https://welldonesp.github.io/senhormaromba/assets/produtos/${produtoNome}.webp" 
-               onerror="this.onerror=null;this.src='https://welldonesp.github.io/senhormaromba/assets/produtos/placeholder.png';" 
+          <img class="produto-img" src="${ASSETS_BASE}/produtos/${produtoNome}.webp" 
+               onerror="this.onerror=null;this.src='${ASSETS_BASE}/produtos/placeholder.png';" 
                alt="${nomeFormatado}">
           <div class="produto-info">
             <h3>${nomeFormatado}: ${descricao}</h3>
