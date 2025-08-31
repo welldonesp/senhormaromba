@@ -9,6 +9,11 @@ async function getProdutos() {
   return res.json();
 }
 
+// Normaliza nomes para comparação (remove espaços e coloca em minúsculo)
+function normalize(str) {
+  return str.toLowerCase().replace(/\s+/g, '');
+}
+
 // Função para redirecionar para a URL correta de um produto
 export async function redirect(produto, loja) {
   const produtos = await getProdutos();
@@ -16,11 +21,20 @@ export async function redirect(produto, loja) {
   for (const secao of Object.values(produtos)) {
     if (secao[produto]) {
       const item = secao[produto];
-      const lojaEscolhida = loja
-        ? item.lojas.find(l => l.loja === loja) || item.lojas[0]
-        : item.lojas[0];
+
+      let lojaEscolhida;
+
+      if (loja) {
+        // Busca normalizando
+        lojaEscolhida = item.lojas.find(l => normalize(l.loja) === normalize(loja));
+      }
+
+      // Se não encontrou, pega a primeira loja da lista
+      if (!lojaEscolhida) lojaEscolhida = item.lojas[0];
+
       return lojaEscolhida.url;
     }
   }
+
   return null;
 }

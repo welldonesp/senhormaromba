@@ -1,4 +1,6 @@
-const ASSETS_BASE = 'https://welldonesp.github.io/senhormaromba/assets';
+const BASE = 'https://welldonesp.github.io/senhormaromba/';
+const ASSETS_BASE = BASE + 'assets';
+const CSS_BASE = BASE + 'worker-loja/src/';
 const PRODUTOS_URL = `${ASSETS_BASE}/produtos/_produtos.json`;
 
 async function getProdutos() {
@@ -14,6 +16,11 @@ function capitalizeWords(str) {
     .join(' ');
 }
 
+// Normaliza o nome da loja para gerar o ícone e o link
+function normalize(str) {
+  return str.toLowerCase().replace(/\s+/g, '');
+}
+
 function lojaIcon(loja) {
   const nomeArquivo = loja.toLowerCase().replace(/\s+/g, '') + '.png';
   return `${ASSETS_BASE}/lojas/${nomeArquivo}`;
@@ -27,7 +34,7 @@ export async function renderPage() {
     <head>
       <meta charset="UTF-8">
       <title>Loja Senhor Maromba</title>
-      <link rel="stylesheet" href="${ASSETS_BASE}/../src/style.css?v=4">
+      <link rel="stylesheet" href="${CSS_BASE}style.css?v=4">
     </head>
     <body>
       <div class="header">
@@ -55,8 +62,9 @@ export async function renderPage() {
       `;
 
       for (const l of produtoDados.lojas) {
+        const lojaHref = `/` + produtoNome + `/` + normalize(l.loja);
         html += `
-          <a class="loja-link" href="/${produtoNome}/${l.loja}">
+          <a class="loja-link" href="${lojaHref}">
             <img src="${lojaIcon(l.loja)}" alt="${l.loja}">${l.loja}
           </a>
         `;

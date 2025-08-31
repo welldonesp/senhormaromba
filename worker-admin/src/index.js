@@ -1,4 +1,4 @@
-import { renderAdminPage } from './renderAdmin.js';
+import { renderAdminPage } from './render-admin.js';
 
 addEventListener('fetch', event => {
   event.respondWith(
