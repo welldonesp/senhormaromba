@@ -1,6 +1,12 @@
-import produtos from '../assets/produtos/_produtos.json' assert { type: 'json' };
+const ASSETS_BASE = 'https://welldonesp.github.io/senhormaromba/assets';
+const PRODUTOS_URL = `${ASSETS_BASE}/produtos/_produtos.json`;
 
-// Função para colocar as iniciais de cada palavra em maiúscula
+async function getProdutos() {
+  const res = await fetch(PRODUTOS_URL);
+  if (!res.ok) throw new Error('Não foi possível carregar os produtos');
+  return res.json();
+}
+
 function capitalizeWords(str) {
   return str
     .split('-')
@@ -8,16 +14,13 @@ function capitalizeWords(str) {
     .join(' ');
 }
 
-// Radical das pastas para facilitar manutenção
-const ASSETS_BASE = 'https://welldonesp.github.io/senhormaromba/assets';
-
-// Função para gerar URL do ícone da loja
 function lojaIcon(loja) {
-  const nomeArquivo = loja.toLowerCase() + '.png';
+  const nomeArquivo = loja.toLowerCase().replace(/\s+/g, '') + '.png';
   return `${ASSETS_BASE}/lojas/${nomeArquivo}`;
 }
 
 export async function renderPage() {
+  const produtos = await getProdutos();
   let html = `
     <!DOCTYPE html>
     <html lang="pt-BR">
@@ -36,7 +39,6 @@ export async function renderPage() {
 
   for (const [secaoNome, secaoProdutos] of Object.entries(produtos)) {
     html += `<h2 class="secao">${secaoNome}</h2>`;
-
     for (const [produtoNome, produtoDados] of Object.entries(secaoProdutos)) {
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
       const descricao = produtoDados.desc || '';

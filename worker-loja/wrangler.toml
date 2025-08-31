@@ -1,4 +1,4 @@
 name = "loja"
 compatibility_date = "2025-08-30"
 account_id = "616fe3162444437af25f52d02b28e9f7"
-main = "src/worker-loja/index.js"
+main = "src/index.js"
