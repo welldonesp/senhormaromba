@@ -1,14 +1,10 @@
+import { redirect, normalizeLoja, redirectReal, getProdutos } from '../../shared/redirect.js';
+
 const BASE = 'https://welldonesp.github.io/senhormaromba/';
 const ASSETS_BASE = BASE + 'assets';
 const CSS_BASE = BASE + 'worker-admin/src/';
-const PRODUTOS_URL = `${ASSETS_BASE}/produtos/_produtos.json`;
 const PRODUTOS_IMG_BASE = `${ASSETS_BASE}/produtos/`;
 
-//import { redirect } from './redirect.js';
-import { redirect } from '../../shared/redirect.js';
-
-
-// Função para colocar as iniciais de cada palavra em maiúscula
 function capitalizeWords(str) {
   return str
     .split('-')
@@ -16,10 +12,14 @@ function capitalizeWords(str) {
     .join(' ');
 }
 
-async function getProdutos() {
-  const res = await fetch(PRODUTOS_URL);
-  if (!res.ok) throw new Error('Não foi possível carregar os produtos');
-  return res.json();
+// Função que monta o template do YouTube, sem espaços em branco ao final
+function youtubeTemplate(nome, descricao, lojas) {
+  let text = `*${nome}* - ${descricao}\n\n`;
+  for (const l of lojas) {
+    const lojaHref = redirect(nome, l.loja);
+    text += `👉 [${l.loja}] ${lojaHref}\n\n`;
+  }
+  return text.replace(/\s+$/, ''); // remove espaços e quebras extras ao final
 }
 
 export async function renderAdminPage() {
@@ -35,6 +35,19 @@ export async function renderAdminPage() {
     </head>
     <body>
       <h1>Administração - Produtos Senhor Maromba</h1>
+
+      <script>
+        // Função que copia o template para o clipboard
+        async function copyTemplate(id) {
+          const template = document.getElementById(id).textContent.trimEnd();
+          try {
+            await navigator.clipboard.writeText(template + '\\n');
+            alert('Template copiado para o clipboard!');
+          } catch (err) {
+            alert('Erro ao copiar template: ' + err);
+          }
+        }
+      </script>
   `;
 
   for (const [secaoNome, secaoProdutos] of Object.entries(produtos)) {
@@ -43,6 +56,7 @@ export async function renderAdminPage() {
     for (const [produtoNome, produtoDados] of Object.entries(secaoProdutos)) {
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
       const descricao = produtoDados.desc || '';
+      const templateId = `template-${produtoNome}`;
 
       html += `
         <div class="produto">
@@ -52,6 +66,10 @@ export async function renderAdminPage() {
           <div class="produto-info">
             <h3>${nomeFormatado}</h3>
             <p>${descricao}</p>
+            <button onclick="copyTemplate('${templateId}')">Copiar template YouTube</button>
+            <pre id="${templateId}" style="display:none;">
+${youtubeTemplate(nomeFormatado, descricao, produtoDados.lojas)}
+            </pre>
             <table>
               <tr>
                 <th>Loja</th>
@@ -61,13 +79,14 @@ export async function renderAdminPage() {
       `;
 
       for (const l of produtoDados.lojas) {
-        const urlRedir = redirect(produtoNome, l.loja);
+        const urlRedir = await redirectReal(produtoNome, l.loja);
+        const lojaHref = redirect(produtoNome, l.loja);
 
         html += `
               <tr>
                 <td>${l.loja}</td>
                 <td><a href="${l.url}" target="_blank">${l.url}</a></td>
-                <td><a href="${urlRedir}" target="_blank">${urlRedir}</a></td>
+                <td><a href="${lojaHref}" target="_blank">${lojaHref}</a></td>
               </tr>
         `;
       }

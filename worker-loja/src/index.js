@@ -1,4 +1,4 @@
-import { redirect } from './redirect.js';
+import { redirectReal } from '../../shared/redirect.js';
 import { renderPage } from './render.js';
 
 export default {
@@ -8,12 +8,14 @@ export default {
     const produto = parts[0];
     const loja = parts[1];
 
+    // Página principal da loja
     if (!produto) {
       const html = await renderPage();
       return new Response(html, { headers: { 'Content-Type': 'text/html; charset=UTF-8' } });
     }
 
-    const destino = await redirect(produto, loja);
+    // Redirecionamento real para o produto
+    const destino = await redirectReal(produto, loja); // <- assíncrono
     if (!destino) return new Response('Produto não encontrado', { status: 404 });
 
     return new Response(null, {

@@ -3,11 +3,7 @@ const ASSETS_BASE = BASE + 'assets';
 const CSS_BASE = BASE + 'worker-loja/src/';
 const PRODUTOS_URL = `${ASSETS_BASE}/produtos/_produtos.json`;
 
-async function getProdutos() {
-  const res = await fetch(PRODUTOS_URL);
-  if (!res.ok) throw new Error('Não foi possível carregar os produtos');
-  return res.json();
-}
+import { redirect, normalizeLoja, getProdutos } from '../../shared/redirect.js';
 
 function capitalizeWords(str) {
   return str
@@ -16,18 +12,13 @@ function capitalizeWords(str) {
     .join(' ');
 }
 
-// Normaliza o nome da loja para gerar o ícone e o link
-function normalize(str) {
-  return str.toLowerCase().replace(/\s+/g, '');
-}
-
 function lojaIcon(loja) {
-  const nomeArquivo = loja.toLowerCase().replace(/\s+/g, '') + '.png';
-  return `${ASSETS_BASE}/lojas/${nomeArquivo}`;
+  return `${ASSETS_BASE}/lojas/${normalizeLoja(loja)}.png`;
 }
 
 export async function renderPage() {
   const produtos = await getProdutos();
+
   let html = `
     <!DOCTYPE html>
     <html lang="pt-BR">
@@ -46,6 +37,7 @@ export async function renderPage() {
 
   for (const [secaoNome, secaoProdutos] of Object.entries(produtos)) {
     html += `<h2 class="secao">${secaoNome}</h2>`;
+
     for (const [produtoNome, produtoDados] of Object.entries(secaoProdutos)) {
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
       const descricao = produtoDados.desc || '';
@@ -53,8 +45,8 @@ export async function renderPage() {
       html += `
       <div class="produto">
         <div class="produto-container">
-          <img class="produto-img" src="${ASSETS_BASE}/produtos/${produtoNome}.webp" 
-               onerror="this.onerror=null;this.src='${ASSETS_BASE}/produtos/placeholder.png';" 
+          <img class="produto-img" src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
+               onerror="this.onerror=null;this.src='${ASSETS_BASE}/produtos/placeholder.png';"
                alt="${nomeFormatado}">
           <div class="produto-info">
             <h3>${nomeFormatado}: ${descricao}</h3>
@@ -62,7 +54,8 @@ export async function renderPage() {
       `;
 
       for (const l of produtoDados.lojas) {
-        const lojaHref = `/` + produtoNome + `/` + normalize(l.loja);
+        const lojaHref = await redirect(produtoNome, l.loja); // interno
+
         html += `
           <a class="loja-link" href="${lojaHref}">
             <img src="${lojaIcon(l.loja)}" alt="${l.loja}">${l.loja}
