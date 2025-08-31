@@ -1,4 +1,4 @@
-import produtos from './produtos.json' assert { type: 'json' };
+import produtos from '../assets/produtos/_produtos.json' assert { type: 'json' };
 import { redirect } from './redirect.js';
 
 // Função para colocar as iniciais de cada palavra em maiúscula

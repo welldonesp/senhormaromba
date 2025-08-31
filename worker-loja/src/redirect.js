@@ -1,4 +1,4 @@
-import produtos from './produtos.json' assert { type: 'json' };
+import produtos from '../assets/produtos/_produtos.json' assert { type: 'json' };
 
 // Função para redirecionar para a URL correta de um produto
 export async function redirect(produto, loja) {

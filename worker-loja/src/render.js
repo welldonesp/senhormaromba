@@ -1,4 +1,4 @@
-import produtos from './produtos.json' assert { type: 'json' };
+import produtos from '../assets/produtos/_produtos.json' assert { type: 'json' };
 
 // Função para colocar as iniciais de cada palavra em maiúscula
 function capitalizeWords(str) {
