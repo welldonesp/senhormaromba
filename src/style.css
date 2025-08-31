@@ -53,3 +53,18 @@ footer {
   text-align: center;
   display: block;
 }
+
+.produto-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.produto-imagem {
+  width: 100px;   /* tamanho fixo para todas */
+  height: 100px;  /* força padrão visual */
+  object-fit: contain; /* mantém proporção sem cortar */
+  background: #222; /* fundo neutro para imagens menores */
+  border-radius: 5px;
+  padding: 5px;
+}

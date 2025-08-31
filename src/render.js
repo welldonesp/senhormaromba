@@ -34,8 +34,20 @@ export async function renderPage() {
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
       const descricao = produtoDados.desc || '';
 
-      html += `<div class="produto"><h3>${nomeFormatado}: ${descricao}</h3>`;
-      html += `<div class="links">`;
+      // Bloco do produto
+      html += `
+        <div class="produto">
+          <div class="produto-header">
+            <picture>
+              <source srcset="https://welldonesp.github.io/senhormaromba/assets/produtos/${produtoNome}.webp" type="image/webp">
+              <source srcset="https://welldonesp.github.io/senhormaromba/assets/produtos/${produtoNome}.jpg" type="image/jpeg">
+              <img src="https://welldonesp.github.io/senhormaromba/assets/produtos/${produtoNome}.png" 
+                   alt="${nomeFormatado}" class="produto-imagem">
+            </picture>
+            <h3>${nomeFormatado}: ${descricao}</h3>
+          </div>
+          <div class="links">
+      `;
 
       // Links de cada loja
       for (const l of produtoDados.lojas) {
@@ -46,9 +58,14 @@ export async function renderPage() {
     }
   }
 
-  html += `<footer>Todos os links são afiliados, o que me ajuda a continuar produzindo conteúdo.<br>
-           Conheça o canal: <a href="https://www.youtube.com/@SenhorMaromba" target="_blank">Senhor Maromba</a></footer>`;
-  html += `</body></html>`;
+  html += `
+    <footer>
+      Todos os links são afiliados, o que me ajuda a continuar produzindo conteúdo.<br>
+      Conheça o canal: <a href="https://www.youtube.com/@SenhorMaromba" target="_blank">Senhor Maromba</a>
+    </footer>
+    </body>
+    </html>
+  `;
 
   return html;
 }
