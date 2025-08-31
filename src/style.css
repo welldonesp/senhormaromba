@@ -60,11 +60,27 @@ footer {
   gap: 15px;
 }
 
-.produto-imagem {
-  width: 100px;   /* tamanho fixo para todas */
-  height: 100px;  /* força padrão visual */
-  object-fit: contain; /* mantém proporção sem cortar */
+.produto-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.produto-img {
+  width: 120px; /* todas as imagens terão a mesma largura */
+  height: 120px; /* todas as imagens terão a mesma altura */
+  object-fit: cover; /* mantém proporção sem quebrar layout */
   background: #222; /* fundo neutro para imagens menores */
+  flex-shrink: 0;
   border-radius: 5px;
   padding: 5px;
+
+  /*object-fit: contain; mantém proporção sem cortar */
+
+
 }
+
+.produto-info {
+  flex: 1;
+}
+
