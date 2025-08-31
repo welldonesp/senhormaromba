@@ -4,14 +4,14 @@
       "desc": "Ideal para iniciantes e treinos de puxada moderada.",
       "lojas": [
         { "loja": "Amazon", "url": "https://amzn.to/4mGRlAM" },
-        { "loja": "MercadoLivre", "url": "https://mercadolivre.com/sec/2fU4MVm" }
+        { "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm" }
       ]
     },
     "strap-figure-eight": {
       "desc": "Perfeito para pegadas pesadas e levantamento intenso.",
       "lojas": [
         { "loja": "Amazon", "url": "https://amzn.to/41pBoXa" },
-        { "loja": "MercadoLivre", "url": "https://mercadolivre.com/sec/1PHYoZN" }
+        { "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1PHYoZN" }
       ]
     }
   },
@@ -20,7 +20,7 @@
       "desc": "Proteção extra e melhor aderência.",
       "lojas": [
         { "loja": "Amazon", "url": "https://amzn.to/3HMLSt0" },
-        { "loja": "MercadoLivre", "url": "https://mercadolivre.com/sec/2Yq1unZ" }
+        { "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2Yq1unZ" }
       ]
     }
   },
@@ -29,7 +29,7 @@
       "desc": "Evita escorregões e melhora seu desempenho.",
       "lojas": [
         { "loja": "Amazon", "url": "https://amzn.to/3HSQTQL" },
-        { "loja": "MercadoLivre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
+        { "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
       ]
     }
   }
