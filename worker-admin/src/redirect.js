@@ -1,17 +1,13 @@
-import produtos from '../assets/produtos/_produtos.json' assert { type: 'json' };
+// Endereço base do worker de loja
+export const LOJA_BASE = 'https://loja.senhormaromba.com.br/';
 
-// Função para redirecionar para a URL correta de um produto
-export async function redirect(produto, loja) {
-  // Percorre todas as seções do JSON (Straps, Luvas, Diversos...)
-  for (const secao of Object.values(produtos)) {
-    if (secao[produto]) {
-      const item = secao[produto]; // agora é um objeto { desc, lojas }
-      // Se a loja foi especificada, procura nela, senão usa a primeira URL da lista
-      const lojaEscolhida = loja
-        ? item.lojas.find(l => l.loja === loja) || item.lojas[0]
-        : item.lojas[0];
-      return lojaEscolhida.url;
-    }
-  }
-  return null;
+/**
+ * Gera o link de redirecionamento interno para um produto e loja
+ * @param {string} produto - Nome do produto
+ * @param {string} loja - Nome da loja
+ * @returns {string} URL de redirecionamento interno
+ */
+export function redirect(produto, loja) {
+  const lojaNorm = loja.toLowerCase().replace(/\s+/g, '');
+  return `${LOJA_BASE}${produto}/${lojaNorm}`;
 }

@@ -1,5 +1,12 @@
-import produtos from '../assets/produtos/_produtos.json' assert { type: 'json' };
-import { redirect } from './redirect.js';
+const BASE = 'https://welldonesp.github.io/senhormaromba/';
+const ASSETS_BASE = BASE + 'assets';
+const CSS_BASE = BASE + 'worker-admin/src/';
+const PRODUTOS_URL = `${ASSETS_BASE}/produtos/_produtos.json`;
+const PRODUTOS_IMG_BASE = `${ASSETS_BASE}/produtos/`;
+
+//import { redirect } from './redirect.js';
+import { redirect } from '../../shared/redirect.js';
+
 
 // Função para colocar as iniciais de cada palavra em maiúscula
 function capitalizeWords(str) {
@@ -9,17 +16,22 @@ function capitalizeWords(str) {
     .join(' ');
 }
 
-// Pasta base para imagens de produtos
-const PRODUTOS_BASE = 'https://welldonesp.github.io/senhormaromba/assets/produtos/';
+async function getProdutos() {
+  const res = await fetch(PRODUTOS_URL);
+  if (!res.ok) throw new Error('Não foi possível carregar os produtos');
+  return res.json();
+}
 
 export async function renderAdminPage() {
+  const produtos = await getProdutos();
   let html = `
     <!DOCTYPE html>
     <html lang="pt-BR">
     <head>
       <meta charset="UTF-8">
       <title>Administração - Produtos Senhor Maromba</title>
-      <link rel="stylesheet" href="https://welldonesp.github.io/senhormaromba/src/style-admin.css">
+      <link rel="stylesheet" href="${CSS_BASE}style-admin.css?v=4">
+      <meta name="robots" content="noindex, nofollow">
     </head>
     <body>
       <h1>Administração - Produtos Senhor Maromba</h1>
@@ -34,8 +46,8 @@ export async function renderAdminPage() {
 
       html += `
         <div class="produto">
-          <img class="produto-img" src="${PRODUTOS_BASE}${produtoNome}.webp"
-               onerror="this.onerror=null;this.src='${PRODUTOS_BASE}placeholder.png';"
+          <img class="produto-img" src="${PRODUTOS_IMG_BASE}${produtoNome}.webp"
+               onerror="this.onerror=null;this.src='${PRODUTOS_IMG_BASE}placeholder.png';"
                alt="${nomeFormatado}">
           <div class="produto-info">
             <h3>${nomeFormatado}</h3>
@@ -49,7 +61,8 @@ export async function renderAdminPage() {
       `;
 
       for (const l of produtoDados.lojas) {
-        const urlRedir = await redirect(produtoNome, l.loja);
+        const urlRedir = redirect(produtoNome, l.loja);
+
         html += `
               <tr>
                 <td>${l.loja}</td>
