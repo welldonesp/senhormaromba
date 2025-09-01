@@ -40,6 +40,10 @@ export async function renderPage() {
     html += `<h2 class="secao">${secaoNome}</h2>`;
 
     for (const [produtoNome, produtoDados] of Object.entries(secaoProdutos)) {
+      // Filtra apenas lojas com status 0 ou 1
+      const lojasAtivas = produtoDados.lojas.filter(l => l.status === "0" || l.status === "1");
+      if (lojasAtivas.length === 0) continue; // pula o produto se nenhuma loja estiver ativa
+
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
       const descricao = produtoDados.desc || '';
 
@@ -54,8 +58,8 @@ export async function renderPage() {
             <div class="links">
       `;
 
-      for (const l of produtoDados.lojas) {
-        const lojaHref = await redirect(produtoNome, l.loja); // interno
+      for (const l of lojasAtivas) {
+        const lojaHref = redirect(produtoNome, l.loja); // link interno
 
         html += `
           <a class="loja-link" href="${lojaHref}">
