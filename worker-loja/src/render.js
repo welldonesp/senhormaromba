@@ -69,7 +69,7 @@ export async function renderPage() {
         const lojaHref = redirect(produtoNome, l.loja); // link interno
 
         html += `
-          <a class="loja-link" href="${lojaHref}">
+          <a class="loja-link" href="${lojaHref}" target="_blank">
             <img src="${lojaIcon(l.loja)}" alt="${l.loja}">${l.loja}
           </a>
         `;
