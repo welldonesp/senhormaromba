@@ -1,35 +1,35 @@
 {
   "Straps": {
     "strap-tradicional": {
-      "status": "1", "desc": "Ideal para iniciantes e treinos de puxada moderada.",
+      "desc": "Ideal para iniciantes e treinos de puxada moderada.",
       "lojas": [
-        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4mGRlAM", "last_view": null },
-        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm", "last_view": null }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4mGRlAM" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm" }
       ]
     },
     "strap-figure-eight": {
-      "status": "1", "desc": "Perfeito para pegadas pesadas e levantamento intenso.",
+      "desc": "Perfeito para pegadas pesadas e levantamento intenso.",
       "lojas": [
-        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/41pBoXa", "last_view": null },
-        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1PHYoZN",  "last_view": null }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/41pBoXa" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1PHYoZN" }
       ]
     }
   },
   "Luvas": {
     "luvas-treino-premium": {
-      "status": "1", "desc": "Proteção extra e melhor aderência.",
+      "desc": "Proteção extra e melhor aderência.",
       "lojas": [
-        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HMLSt0", "last_view": null },
-        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2Yq1unZ", "last_view": null }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HMLSt0" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2Yq1unZ" }
       ]
     }
   },
   "Diversos": {
     "magnesio-liquido": {
-      "status": "1", "desc": "Evita escorregões e melhora seu desempenho.",
+      "desc": "Evita escorregões e melhora seu desempenho.",
       "lojas": [
-        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HSQTQL", "last_view": null },
-        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf", "last_view": null }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HSQTQL"},
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
       ]
     }
   }
