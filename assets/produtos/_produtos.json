@@ -5,7 +5,14 @@
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/158BJvB" }
       ]
+    },
+    "banco-regulavel": {
+      "desc": "Banco Regulável Prime Revolution 09 Posições - reto, inclinado e declinado",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1jA9uvm" }
+      ]
     }
+
   },
 
   "Straps": {
