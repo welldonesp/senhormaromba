@@ -3,8 +3,8 @@
     "strap-tradicional": {
       "desc": "Ideal para iniciantes e treinos de puxada moderada.",
       "lojas": [
-        { "status": "2", "loja": "Amazon", "url": "https://amzn.to/4mGRlAM" },
-        { "status": "3", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm" }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4mGRlAM" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm" }
       ]
     },
     "strap-figure-eight": {
