@@ -28,7 +28,7 @@
     "magnesio-liquido": {
       "desc": "Evita escorregões e melhora seu desempenho.",
       "lojas": [
-        { "status": "2", "loja": "Amazon", "url": "https://amzn.to/3HSQTQL"},
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HSQTQL"},
         { "status": "2", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
       ]
     }

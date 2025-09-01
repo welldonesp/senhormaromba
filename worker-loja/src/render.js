@@ -37,6 +37,12 @@ export async function renderPage() {
   `;
 
   for (const [secaoNome, secaoProdutos] of Object.entries(produtos)) {
+    // Verifica se existe pelo menos 1 produto ativo na seção
+    const produtosAtivos = Object.values(secaoProdutos).filter(produtoDados =>
+      produtoDados.lojas.some(l => l.status === "0" || l.status === "1")
+    );
+    if (produtosAtivos.length === 0) continue; // pula a seção se não houver produtos ativos
+
     html += `<h2 class="secao">${secaoNome}</h2>`;
 
     for (const [produtoNome, produtoDados] of Object.entries(secaoProdutos)) {
