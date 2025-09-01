@@ -1,35 +1,35 @@
 {
   "Straps": {
     "strap-tradicional": {
-      "desc": "Ideal para iniciantes e treinos de puxada moderada.",
+      "status": "1", "desc": "Ideal para iniciantes e treinos de puxada moderada.",
       "lojas": [
-        { "loja": "Amazon", "url": "https://amzn.to/4mGRlAM", "status": "ok", "last_view": null },
-        { "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm", "status": "ok", "last_view": null }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4mGRlAM", "last_view": null },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm", "last_view": null }
       ]
     },
     "strap-figure-eight": {
-      "desc": "Perfeito para pegadas pesadas e levantamento intenso.",
+      "status": "1", "desc": "Perfeito para pegadas pesadas e levantamento intenso.",
       "lojas": [
-        { "loja": "Amazon", "url": "https://amzn.to/41pBoXa", "status": "ok", "last_view": null },
-        { "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1PHYoZN", "status": "ok", "last_view": null }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/41pBoXa", "last_view": null },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1PHYoZN",  "last_view": null }
       ]
     }
   },
   "Luvas": {
     "luvas-treino-premium": {
-      "desc": "Proteção extra e melhor aderência.",
+      "status": "1", "desc": "Proteção extra e melhor aderência.",
       "lojas": [
-        { "loja": "Amazon", "url": "https://amzn.to/3HMLSt0", "status": "ok", "last_view": null },
-        { "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2Yq1unZ", "status": "ok", "last_view": null }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HMLSt0", "last_view": null },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2Yq1unZ", "last_view": null }
       ]
     }
   },
   "Diversos": {
     "magnesio-liquido": {
-      "desc": "Evita escorregões e melhora seu desempenho.",
+      "status": "1", "desc": "Evita escorregões e melhora seu desempenho.",
       "lojas": [
-        { "loja": "Amazon", "url": "https://amzn.to/3HSQTQL", "status": "ok", "last_view": null },
-        { "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf", "status": "ok", "last_view": null }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HSQTQL", "last_view": null },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf", "last_view": null }
       ]
     }
   }
