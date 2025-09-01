@@ -1,7 +1,7 @@
 {
   "Straps": {
     "strap-tradicional": {
-      "desc": "Ideal para iniciantes e treinos de puxada moderada!",
+      "desc": "Ideal para iniciantes e treinos de puxada moderada.",
       "lojas": [
         { "loja": "Amazon", "url": "https://amzn.to/4mGRlAM", "status": "ok", "last_view": null },
         { "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm", "status": "ok", "last_view": null }
