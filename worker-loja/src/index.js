@@ -1,7 +1,7 @@
 import { redirectReal } from '../../shared/redirect.js';
 import { renderPage } from './render.js';
 
-const ASSETS_BASE = 'https://welldonesp.github.io/senhormaromba/assets';
+const _BASE = 'https://welldonesp.github.io/senhormaromba';
 const LOJA_URL = 'https://loja.senhormaromba.com.br/';
 
 export default {
@@ -14,7 +14,7 @@ export default {
     // Endpoint para sitemap.xml
     if (url.pathname === '/sitemap.xml') {
       try {
-        const sitemapRes = await fetch(`${ASSETS_BASE}/sitemap.xml`);
+        const sitemapRes = await fetch(`${_BASE}/sitemap.xml`);
         if (!sitemapRes.ok) {
           return new Response('Erro ao carregar sitemap', { status: 500 });
         }
