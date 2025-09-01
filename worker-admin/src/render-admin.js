@@ -12,10 +12,22 @@ function capitalizeWords(str) {
     .join(' ');
 }
 
+// Função que retorna o emoji do status
+function statusEmoji(status) {
+  switch (status) {
+    case "0": return "❓ Verificar";
+    case "1": return "✅ Ok";
+    case "2": return "⏸️ Pausado";
+    case "3": return "❌ Quebrado";
+    default: return "";
+  }
+}
+
 // Função que monta o template do YouTube, sem espaços em branco ao final
 function youtubeTemplate(nome, descricao, lojas) {
+  const lojasAtivas = lojas.filter(l => l.status === "0" || l.status === "1");
   let text = `*${nome}* - ${descricao}\n\n`;
-  for (const l of lojas) {
+  for (const l of lojasAtivas) {
     const lojaHref = redirect(nome, l.loja);
     text += `👉 [${l.loja}] ${lojaHref}\n\n`;
   }
@@ -37,7 +49,6 @@ export async function renderAdminPage() {
       <h1>Administração - Produtos Senhor Maromba</h1>
 
       <script>
-        // Função que copia o template para o clipboard
         async function copyTemplate(id) {
           const template = document.getElementById(id).textContent.trimEnd();
           try {
@@ -72,6 +83,7 @@ ${youtubeTemplate(nomeFormatado, descricao, produtoDados.lojas)}
             </pre>
             <table>
               <tr>
+                <th>Status</th>
                 <th>Loja</th>
                 <th>Link Original</th>
                 <th>Link Redirecionamento</th>
@@ -84,6 +96,7 @@ ${youtubeTemplate(nomeFormatado, descricao, produtoDados.lojas)}
 
         html += `
               <tr>
+                <td>${statusEmoji(l.status)}</td>
                 <td>${l.loja}</td>
                 <td><a href="${l.url}" target="_blank">${l.url}</a></td>
                 <td><a href="${lojaHref}" target="_blank">${lojaHref}</a></td>

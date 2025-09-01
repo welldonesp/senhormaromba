@@ -4,8 +4,7 @@
       "desc": "Ideal para iniciantes e treinos de puxada moderada.",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4mGRlAM" },
-        { "status": "0", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm" },
-        { "status": "3", "loja": "Aliexpress", "url": "https://mercadolivre.com/sec/2fU4MVm" }
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm" },
       ]
     },
     "strap-figure-eight": {
@@ -13,7 +12,6 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/41pBoXa" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1PHYoZN" },
-        { "status": "2", "loja": "Aliexpress", "url": "https://mercadolivre.com/sec/2fU4MVm" }
       ]
     }
   },
