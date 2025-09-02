@@ -27,7 +27,7 @@ export async function renderPage() {
       <title>Loja Senhor Maromba</title>
       <meta name="description" content="Pare de gastar com produtos ruins! Loja Senhor Maromba tem tudo para musculação testado de verdade. Compre agora!">
       <link rel="icon" href="${ASSETS_BASE}/favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="${CSS_BASE}style.css?v=4">
+      <link rel="stylesheet" href="${CSS_BASE}style.css?v=5">
     </head>
     <body>
       <div class="header">
@@ -38,18 +38,16 @@ export async function renderPage() {
   `;
 
   for (const [secaoNome, secaoProdutos] of Object.entries(produtos)) {
-    // Verifica se existe pelo menos 1 produto ativo na seção
     const produtosAtivos = Object.values(secaoProdutos).filter(produtoDados =>
       produtoDados.lojas.some(l => l.status === "0" || l.status === "1")
     );
-    if (produtosAtivos.length === 0) continue; // pula a seção se não houver produtos ativos
+    if (produtosAtivos.length === 0) continue;
 
     html += `<h2 class="secao">${secaoNome}</h2>`;
 
     for (const [produtoNome, produtoDados] of Object.entries(secaoProdutos)) {
-      // Filtra apenas lojas com status 0 ou 1
       const lojasAtivas = produtoDados.lojas.filter(l => l.status === "0" || l.status === "1");
-      if (lojasAtivas.length === 0) continue; // pula o produto se nenhuma loja estiver ativa
+      if (lojasAtivas.length === 0) continue;
 
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
       const descricao = produtoDados.desc || '';
@@ -61,14 +59,15 @@ export async function renderPage() {
               src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
               onerror="this.onerror=null;this.src='${ASSETS_BASE}/produtos/placeholder.png';"
               alt="${nomeFormatado} - ${descricao} | Loja Senhor Maromba"
-              title="${nomeFormatado} para musculação - Loja Senhor Maromba">
+              title="${nomeFormatado} para musculação - Loja Senhor Maromba"
+              onclick="openModal(this.src)">
           <div class="produto-info">
             <h3>${nomeFormatado}: ${descricao}</h3>
             <div class="links">
       `;
 
       for (const l of lojasAtivas) {
-        const lojaHref = redirect(produtoNome, l.loja); // link interno
+        const lojaHref = redirect(produtoNome, l.loja);
 
         html += `
           <a class="loja-link" href="${lojaHref}" target="_blank">
@@ -81,11 +80,36 @@ export async function renderPage() {
     }
   }
 
+  // Modal global
   html += `
+    <div id="imgModal" class="modal">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+
     <footer>
       Todos os links são afiliados, o que me ajuda a continuar produzindo conteúdo.<br>
       Conheça o canal: <a href="https://www.youtube.com/@SenhorMaromba" target="_blank">Senhor Maromba</a>
     </footer>
+
+    <script>
+      function openModal(src) {
+        const modal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImg');
+        modal.style.display = 'block';
+        modalImg.src = src;
+      }
+      function closeModal() {
+        document.getElementById('imgModal').style.display = 'none';
+      }
+      // Fecha modal ao clicar fora da imagem
+      window.onclick = function(event) {
+        const modal = document.getElementById('imgModal');
+        if (event.target === modal) {
+          closeModal();
+        }
+      }
+    </script>
     </body>
     </html>
   `;

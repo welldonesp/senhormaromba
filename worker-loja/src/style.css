@@ -6,22 +6,18 @@ body {
   padding: 20px;
 }
 
-h1 {
-  color: #f1bf00;
-}
-
-h2 {
+h1, h2 {
   color: #f1bf00;
 }
 
 .header {
   display: flex;
   align-items: center;
-  gap: 15px; /* espaço entre logotipo e título */
+  gap: 15px;
 }
 
 .logo {
-  width: 80px; /* ajuste o tamanho que desejar */
+  width: 80px;
   height: auto;
 }
 
@@ -33,9 +29,9 @@ h2 {
 
 .links {
   display: flex;
-  flex-wrap: wrap;  /* Quebra linha se não couber */
-  gap: 15px;        /* Espaço entre os links */
-  margin-top: 5px;  /* Espaço entre o nome do produto e os links */
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 5px;
 }
 
 a {
@@ -73,6 +69,12 @@ footer {
   background: #222; /* fundo neutro para imagens menores */
   border-radius: 5px;
   padding: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.produto-img:hover {
+  transform: scale(1.1);
 }
 
 .produto-info {
@@ -84,7 +86,7 @@ footer {
   align-items: center;
   gap: 5px;
   padding: 2px 5px;
-  font-size: 1em; /* tamanho do nome da loja */
+  font-size: 1em;
 }
 
 .loja-link img {
@@ -96,3 +98,33 @@ footer {
   object-fit: contain;
 }
 
+/* ==== MODAL ==== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
