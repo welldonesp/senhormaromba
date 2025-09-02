@@ -57,9 +57,11 @@ export async function renderPage() {
       html += `
       <div class="produto">
         <div class="produto-container">
-          <img class="produto-img" src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
-               onerror="this.onerror=null;this.src='${ASSETS_BASE}/produtos/placeholder.png';"
-               alt="${nomeFormatado}">
+          <img class="produto-img" 
+              src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
+              onerror="this.onerror=null;this.src='${ASSETS_BASE}/produtos/placeholder.png';"
+              alt="${nomeFormatado} - ${descricao} | Loja Senhor Maromba"
+              title="${nomeFormatado} para musculação - Loja Senhor Maromba">
           <div class="produto-info">
             <h3>${nomeFormatado}: ${descricao}</h3>
             <div class="links">
