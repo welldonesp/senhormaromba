@@ -1,6 +1,12 @@
 {
   "Barras e Anilhas": {
 
+    "kit-2-anilhas-500-gramas": {
+      "desc": "Par de anilhas de 1/2 kg para levar seu treino ao limite! <br>Imagine poder aumentar apenas 1/2 kg na elevação lateral ou 1 kg no agachamento e levantamento terra!",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1Mby9Lu" }
+      ]
+    },
     "anilha-20-kg-ferro-fundido": {
       "desc": "Aconselho as anilhas pintadas pela economia e durabilidade. <br>As emborrachadas depois de um tempo perdem o revestimento, deixando o metal por baixo sem proteção.",
       "lojas": [
