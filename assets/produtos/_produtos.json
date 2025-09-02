@@ -1,5 +1,12 @@
 {
   "Barras e Anilhas": {
+    "barra-reta-2metros": {
+      "desc": "Barra Maciça Reta 2,00m cromada - tamanho adequado para uso em rack, execução de supino, agachamento e levantamento terra. Bom espaço para anilhas.",
+      "lojas": [
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4ngwkwN" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2PLyWeE" }
+      ]
+    },
     "barra-halter-roscavel": {
       "desc": "Barras de Halter 40cm maciça cromada com rosca - não deixa as anilhas caírem.",
       "lojas": [
