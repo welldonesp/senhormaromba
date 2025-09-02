@@ -66,6 +66,7 @@ footer {
 
 .produto-desc {
   font-size: 0.9em;
+  margin-block-start: 0.2em;
   color: #ccc;
   flex: 1; /* ocupa o espaço restante */
 }
