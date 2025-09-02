@@ -43,6 +43,12 @@
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/158BJvB" }
       ]
+    },
+    "suporte-flexao-nordica": {
+      "desc": "Uma opção prática e confortável para realizar a flexão nórdica. <br>Suporte confortável com posicionamento estável e seguro.",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/25xfoBQ" }
+      ]
     }
   },
 
