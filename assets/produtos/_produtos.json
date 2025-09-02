@@ -1,5 +1,13 @@
 {
   "Barras e Anilhas": {
+
+    "anilha-20-kg-ferro-fundido": {
+      "desc": "Anilha de aço pintada 20 kgs - aconselho as anilhas pintadas pela economia e durabilidade. As emborrachadas depois de um tempo perdem o revestimento, deixando o metal por baixo sem proteção.",
+      "lojas": [
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/45Kr8LG" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2QU8roD" }
+      ]
+    },
     "barra-reta-2-metros": {
       "desc": "Barra Maciça Reta 2,00m cromada - tamanho adequado para uso em rack, execução de supino, agachamento e levantamento terra. Bom espaço para anilhas.",
       "lojas": [
