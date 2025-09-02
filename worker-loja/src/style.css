@@ -52,27 +52,27 @@ footer {
 
 .produto-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+  flex-wrap: wrap; /* permite quebrar se ficar apertado */
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .produto-header h3 {
   margin: 0;
-  font-size: 1.2em; /* menor que o padrão */
+  font-size: 1.1em;
   color: #fff;
+  font-weight: 600;
 }
 
 .produto-desc {
-  margin: 0;
   font-size: 0.9em;
   color: #ccc;
-  text-align: right;
-  max-width: 60%; /* evita quebrar tudo */
+  flex: 1; /* ocupa o espaço restante */
 }
 
 .produto-desc b {
-  color: #f1bf00; /* destaca negrito no mesmo tom do título */
+  color: #f1bf00;
 }
 
 .produto-container {
