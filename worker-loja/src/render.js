@@ -60,18 +60,18 @@ export async function renderPage() {
       html += `
       <div class="produto">
         <div class="produto-container">
-
-          <img class="produto-img"
-               src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
-               data-src-webp="${ASSETS_BASE}/produtos/${produtoNome}.webp"
-               data-src-png="${ASSETS_BASE}/produtos/${produtoNome}.png"
-               data-src-jpg="${ASSETS_BASE}/produtos/${produtoNome}.jpg"
-               data-fallback-step="0"
-               alt="${nomeFormatado} - ${descricaoAlt} | Loja Senhor Maromba"
-               title="${nomeFormatado} para musculação - Loja Senhor Maromba"
-               onclick="openModal(this)"
-               onerror="fallbackImg(this)">
-          
+          <picture>
+            <source srcset="${ASSETS_BASE}/produtos/${produtoNome}.webp" type="image/webp">
+            <source srcset="${ASSETS_BASE}/produtos/${produtoNome}.png" type="image/png">
+            <source srcset="${ASSETS_BASE}/produtos/${produtoNome}.jpg" type="image/jpeg">
+            <img class="produto-img"
+                 src="${ASSETS_BASE}/produtos/placeholder.png"
+                 alt="${nomeFormatado} - ${descricaoAlt} | Loja Senhor Maromba"
+                 title="${nomeFormatado} para musculação - Loja Senhor Maromba"
+                 loading="lazy"
+                 onload="this.setAttribute('loaded', 'true')"
+                 onclick="openModal(this)">
+          </picture>
           <div class="produto-info">
             <div class="produto-header">
               <h3>${nomeFormatado}</h3>
@@ -94,7 +94,6 @@ export async function renderPage() {
     }
   }
 
-  // Modal global + scripts para fallback de imagens e modal
   html += `
     <div id="imgModal" class="modal" aria-hidden="true">
       <span class="modal-close" onclick="closeModal()" role="button" aria-label="Fechar">&times;</span>
@@ -107,27 +106,6 @@ export async function renderPage() {
     </footer>
 
     <script>
-      // fallbackImg: tenta png → jpg → placeholder (começa em webp já carregado no src inicial)
-      function fallbackImg(img) {
-        // parâmetro img é o elemento <img>
-        const step = parseInt(img.dataset.fallbackStep || '0', 10);
-
-        if (step === 0) {
-          img.dataset.fallbackStep = '1';
-          if (img.dataset.srcPng) { img.src = img.dataset.srcPng; return; }
-        }
-
-        if (step <= 1) {
-          img.dataset.fallbackStep = '2';
-          if (img.dataset.srcJpg) { img.src = img.dataset.srcJpg; return; }
-        }
-
-        // último recurso: placeholder
-        img.onerror = null; // evita loop
-        img.src = '${ASSETS_BASE}/produtos/placeholder.png';
-      }
-
-      // openModal aceita um elemento <img> ou uma URL
       function openModal(elOrSrc) {
         const modal = document.getElementById('imgModal');
         const modalImg = document.getElementById('modalImg');
@@ -149,7 +127,6 @@ export async function renderPage() {
         modalImg.src = '';
       }
 
-      // Fecha modal ao clicar fora da imagem
       window.addEventListener('click', function(event) {
         const modal = document.getElementById('imgModal');
         if (event.target === modal) {
@@ -157,7 +134,6 @@ export async function renderPage() {
         }
       });
 
-      // Fecha com ESC
       window.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeModal();
       });
