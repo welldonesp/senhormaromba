@@ -62,10 +62,11 @@ export async function renderPage() {
         <div class="produto-container">
 
           <img class="produto-img"
-              src="${ASSETS_BASE}/produtos/placeholder.png"
-              srcset="
-              ${ASSETS_BASE}/produtos/${produtoNome}.webp 1x,
-              ${ASSETS_BASE}/produtos/${produtoNome}.jpg 2x"
+               src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
+               data-src-webp="${ASSETS_BASE}/produtos/${produtoNome}.webp"
+               data-src-png="${ASSETS_BASE}/produtos/${produtoNome}.png"
+               data-src-jpg="${ASSETS_BASE}/produtos/${produtoNome}.jpg"
+               data-fallback-step="0"
                alt="${nomeFormatado} - ${descricaoAlt} | Loja Senhor Maromba"
                title="${nomeFormatado} para musculação - Loja Senhor Maromba"
                onclick="openModal(this)"
