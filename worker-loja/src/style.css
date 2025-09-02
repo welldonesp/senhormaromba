@@ -53,8 +53,8 @@ footer {
 .produto-header {
   flex-wrap: wrap; /* permite quebrar se ficar apertado */
   align-items: baseline;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 4px;
+  margin-bottom: 4px;
 }
 
 .produto-header h3 {
