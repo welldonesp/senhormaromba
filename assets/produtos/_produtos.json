@@ -96,6 +96,13 @@
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HSQTQL"},
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
       ]
+    },
+    "rolo-de-massagem-e-liberacao-miofascial": {
+      "desc": "Perfeito para soltar a musculatura e aliviar tensões causadas por treinos intensos, movimentos repetitivos ou fadiga muscular. Ideal para usar antes e depois do treino, ajudando a preparar o corpo e acelerar a recuperação.",
+      "lojas": [
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4goGMjD"},
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1nCUWoD" }
+      ]
     }
   }
 }
