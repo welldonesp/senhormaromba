@@ -52,8 +52,27 @@ footer {
 
 .produto-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 15px;
+}
+
+.produto-header h3 {
+  margin: 0;
+  font-size: 1.2em; /* menor que o padrão */
+  color: #fff;
+}
+
+.produto-desc {
+  margin: 0;
+  font-size: 0.9em;
+  color: #ccc;
+  text-align: right;
+  max-width: 60%; /* evita quebrar tudo */
+}
+
+.produto-desc b {
+  color: #f1bf00; /* destaca negrito no mesmo tom do título */
 }
 
 .produto-container {

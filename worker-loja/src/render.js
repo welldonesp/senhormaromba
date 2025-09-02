@@ -62,7 +62,11 @@ export async function renderPage() {
               title="${nomeFormatado} para musculação - Loja Senhor Maromba"
               onclick="openModal(this.src)">
           <div class="produto-info">
-            <h3>${nomeFormatado}: ${descricao}</h3>
+
+            <div class="produto-header">
+              <h3>${nomeFormatado}</h3>
+              <p class="produto-desc">${descricao}</p>
+            </div>
             <div class="links">
       `;
 
