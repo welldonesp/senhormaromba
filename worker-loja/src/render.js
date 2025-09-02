@@ -17,7 +17,7 @@ function lojaIcon(loja) {
 }
 
 function stripHTML(str) {
-  return str ? str.replace(/<[^>]*>?/gm, '') : ''; // remove tags com segurança
+  return str ? str.replace(/<[^>]*>?/gm, '') : ''; // remove tags
 }
 
 export async function renderPage() {
@@ -60,18 +60,17 @@ export async function renderPage() {
       html += `
       <div class="produto">
         <div class="produto-container">
-          <picture>
-            <source srcset="${ASSETS_BASE}/produtos/${produtoNome}.webp" type="image/webp">
-            <source srcset="${ASSETS_BASE}/produtos/${produtoNome}.png" type="image/png">
-            <source srcset="${ASSETS_BASE}/produtos/${produtoNome}.jpg" type="image/jpeg">
-            <img class="produto-img"
-                 src="${ASSETS_BASE}/produtos/placeholder.png"
-                 alt="${nomeFormatado} - ${descricaoAlt} | Loja Senhor Maromba"
-                 title="${nomeFormatado} para musculação - Loja Senhor Maromba"
-                 loading="lazy"
-                 onload="this.setAttribute('loaded', 'true')"
-                 onclick="openModal(this)">
-          </picture>
+
+          <img class="produto-img"
+              src="${ASSETS_BASE}/produtos/placeholder.png"
+              srcset="
+              ${ASSETS_BASE}/produtos/${produtoNome}.webp 1x,
+              ${ASSETS_BASE}/produtos/${produtoNome}.jpg 2x"
+               alt="${nomeFormatado} - ${descricaoAlt} | Loja Senhor Maromba"
+               title="${nomeFormatado} para musculação - Loja Senhor Maromba"
+               onclick="openModal(this)"
+               onerror="fallbackImg(this)">
+          
           <div class="produto-info">
             <div class="produto-header">
               <h3>${nomeFormatado}</h3>
@@ -94,6 +93,7 @@ export async function renderPage() {
     }
   }
 
+  // Modal + fallback
   html += `
     <div id="imgModal" class="modal" aria-hidden="true">
       <span class="modal-close" onclick="closeModal()" role="button" aria-label="Fechar">&times;</span>
@@ -106,13 +106,36 @@ export async function renderPage() {
     </footer>
 
     <script>
+      function fallbackImg(img) {
+        const step = parseInt(img.dataset.fallbackStep || '0', 10);
+
+        if (step === 0 && img.dataset.srcPng) {
+          img.dataset.fallbackStep = '1';
+          img.src = img.dataset.srcPng;
+          return;
+        }
+
+        if (step === 1 && img.dataset.srcJpg) {
+          img.dataset.fallbackStep = '2';
+          img.src = img.dataset.srcJpg;
+          return;
+        }
+
+        img.onerror = null;
+        img.src = '${ASSETS_BASE}/produtos/placeholder.png';
+      }
+
       function openModal(elOrSrc) {
         const modal = document.getElementById('imgModal');
         const modalImg = document.getElementById('modalImg');
         let src;
         if (!elOrSrc) return;
-        if (typeof elOrSrc === 'string') src = elOrSrc;
-        else src = elOrSrc.currentSrc || elOrSrc.src || elOrSrc.getAttribute('src');
+        if (typeof elOrSrc === 'string') {
+          src = elOrSrc;
+        } else {
+          // pega a imagem realmente renderizada
+          src = elOrSrc.currentSrc || elOrSrc.src;
+        }
         modalImg.src = src;
         modalImg.alt = '';
         modal.style.display = 'block';
@@ -129,9 +152,7 @@ export async function renderPage() {
 
       window.addEventListener('click', function(event) {
         const modal = document.getElementById('imgModal');
-        if (event.target === modal) {
-          closeModal();
-        }
+        if (event.target === modal) closeModal();
       });
 
       window.addEventListener('keydown', function(e) {
