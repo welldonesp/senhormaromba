@@ -51,7 +51,6 @@ footer {
 }
 
 .produto-header {
-  display: flex;
   flex-wrap: wrap; /* permite quebrar se ficar apertado */
   align-items: baseline;
   gap: 8px;
