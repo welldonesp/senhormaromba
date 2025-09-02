@@ -86,6 +86,12 @@
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4p2nuUT"},
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1sXjjZk" }
       ]
+    },
+    "creatina-darklab": {
+      "desc": "Creatina Monohidratada Pura 600g Dark Lab Unidade<br>Para quem leva suplementação a sério! <br>Compre agora a sua creatina custo-benefício diretamente da loja oficial Dark Lab no Mercado Livre, sem perder tempo! <br>Não espere ela acabar...",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1KhXNkj" }
+      ]
     }
   },
 
@@ -100,7 +106,7 @@
     "rolo-de-massagem-e-liberacao-miofascial": {
       "desc": "Perfeito para soltar a musculatura e aliviar tensões causadas por treinos intensos, movimentos repetitivos ou fadiga muscular. Ideal para usar antes e depois do treino, ajudando a preparar o corpo e acelerar a recuperação.",
       "lojas": [
-        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4goGMjD"},
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4p9Hqp8"},
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1nCUWoD" }
       ]
     }
