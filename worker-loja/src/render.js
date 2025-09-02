@@ -16,6 +16,10 @@ function lojaIcon(loja) {
   return `${ASSETS_BASE}/lojas/${normalizeLoja(loja)}.png`;
 }
 
+function stripHTML(str) {
+  return str.replace(/<[^>]*>?/gm, ''); // remove tags
+}
+
 export async function renderPage() {
   const produtos = await getProdutos();
 
@@ -51,16 +55,19 @@ export async function renderPage() {
 
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
       const descricao = produtoDados.desc || '';
+      const descricaoAlt = stripHTML(descricao);
 
       html += `
       <div class="produto">
         <div class="produto-container">
+
           <img class="produto-img" 
               src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
               onerror="this.onerror=null;this.src='${ASSETS_BASE}/produtos/placeholder.png';"
-              alt="${nomeFormatado} - ${descricao} | Loja Senhor Maromba"
+              alt="${nomeFormatado} - ${descricaoAlt} | Loja Senhor Maromba"
               title="${nomeFormatado} para musculação - Loja Senhor Maromba"
               onclick="openModal(this.src)">
+
           <div class="produto-info">
 
             <div class="produto-header">
