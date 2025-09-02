@@ -61,15 +61,17 @@ export async function renderPage() {
       <div class="produto">
         <div class="produto-container">
 
-          <img class="produto-img" 
-              src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
-              onerror="this.onerror=null;this.src='${ASSETS_BASE}/produtos/placeholder.png';"
-              alt="${nomeFormatado} - ${descricaoAlt} | Loja Senhor Maromba"
-              title="${nomeFormatado} para musculação - Loja Senhor Maromba"
-              onclick="openModal(this.src)">
+          <picture onclick="openModal('${ASSETS_BASE}/produtos/${produtoNome}.jpg')">
+            <source srcset="${ASSETS_BASE}/produtos/${produtoNome}.webp" type="image/webp">
+            <source srcset="${ASSETS_BASE}/produtos/${produtoNome}.png" type="image/png">
+            <img class="produto-img"
+                src="${ASSETS_BASE}/produtos/${produtoNome}.jpg"
+                alt="${nomeFormatado} - ${descricaoAlt} | Loja Senhor Maromba"
+                title="${nomeFormatado} para musculação - Loja Senhor Maromba"
+                onerror="this.onerror=null;this.src='${ASSETS_BASE}/produtos/placeholder.png';">
+          </picture>
 
           <div class="produto-info">
-
             <div class="produto-header">
               <h3>${nomeFormatado}</h3>
               <p class="produto-desc">${descricao}</p>

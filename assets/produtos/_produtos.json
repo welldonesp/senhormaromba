@@ -77,8 +77,8 @@
     "balanca-de-precisao": {
       "desc": "Balança Digital de Precisão 0.5 gramas, com capacidade máxima de 500 gramas. <br>Para quem leva suplementação a sério! <br>Essencial para nunca errar a dose dos seus suplementos! <br>É pequena e cabe no seu bolso.",
       "lojas": [
-        { "status": "3", "loja": "Amazon", "url": "https://amzn.to/4p2nuUT"},
-        { "status": "3", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1sXjjZk" }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4p2nuUT"},
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1sXjjZk" }
       ]
     }
   },
