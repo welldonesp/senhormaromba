@@ -22,7 +22,7 @@
       ]
     },
     "barra-halter-roscavel": {
-      "desc": "Barras de Halter 40cm maciça cromada com rosca - não deixe as anilhas cair em seu rosto!",
+      "desc": "Barras de Halter 40 cm maciça cromada com rosca. Não deixe as anilhas cair em seu rosto!",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4ngwkwN" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/22Fh3LZ" }
@@ -33,7 +33,7 @@
 
   "Equipamentos": {
     "banco-regulavel": {
-      "desc": "Banco Regulável Prime Revolution 09 Posições - reto, inclinado e declinado",
+      "desc": "Banco Regulável Prime Revolution 09 Posições: reto, inclinado e declinado",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1jA9uvm" }
       ]

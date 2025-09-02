@@ -23,15 +23,21 @@ function statusEmoji(status) {
   }
 }
 
-// Função que monta o template do YouTube, sem espaços em branco ao final
+function htmlToText(str) {
+  if (!str) return '';
+  // substitui <br> por quebra de linha
+  return str.replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]*>?/gm, '');
+}
+
+// Função que monta o template do YouTube
 function youtubeTemplate(nome, descricao, lojas) {
   const lojasAtivas = lojas.filter(l => l.status === "0" || l.status === "1");
-  let text = `*${nome}* - ${descricao}\n\n`;
+  let text = `*${nome}* - ${htmlToText(descricao)}\n\n`;
   for (const l of lojasAtivas) {
     const lojaHref = redirect(nome, l.loja);
     text += `👉 [${l.loja}] ${lojaHref}\n\n`;
   }
-  return text.replace(/\s+$/, ''); // remove espaços e quebras extras ao final
+  return text.replace(/\s+$/, '');
 }
 
 export async function renderAdminPage() {
@@ -42,7 +48,7 @@ export async function renderAdminPage() {
     <head>
       <meta charset="UTF-8">
       <title>Administração - Produtos Senhor Maromba</title>
-      <link rel="stylesheet" href="${CSS_BASE}style-admin.css?v=4">
+      <link rel="stylesheet" href="${CSS_BASE}style-admin.css?v=5">
       <meta name="robots" content="noindex, nofollow">
     </head>
     <body>
@@ -58,6 +64,26 @@ export async function renderAdminPage() {
             alert('Erro ao copiar template: ' + err);
           }
         }
+
+        // mesmo fallback do render.js
+        function fallbackImg(img) {
+          const step = parseInt(img.dataset.fallbackStep || '0', 10);
+
+          if (step === 0 && img.dataset.srcPng) {
+            img.dataset.fallbackStep = '1';
+            img.src = img.dataset.srcPng;
+            return;
+          }
+
+          if (step === 1 && img.dataset.srcJpg) {
+            img.dataset.fallbackStep = '2';
+            img.src = img.dataset.srcJpg;
+            return;
+          }
+
+          img.onerror = null;
+          img.src = '${PRODUTOS_IMG_BASE}placeholder.png';
+        }
       </script>
   `;
 
@@ -71,15 +97,20 @@ export async function renderAdminPage() {
 
       html += `
         <div class="produto">
-          <img class="produto-img" src="${PRODUTOS_IMG_BASE}${produtoNome}.webp"
-               onerror="this.onerror=null;this.src='${PRODUTOS_IMG_BASE}placeholder.png';"
+          <img class="produto-img"
+               src="${PRODUTOS_IMG_BASE}${produtoNome}.webp"
+               data-src-webp="${PRODUTOS_IMG_BASE}${produtoNome}.webp"
+               data-src-png="${PRODUTOS_IMG_BASE}${produtoNome}.png"
+               data-src-jpg="${PRODUTOS_IMG_BASE}${produtoNome}.jpg"
+               data-fallback-step="0"
+               onerror="fallbackImg(this)"
                alt="${nomeFormatado}">
           <div class="produto-info">
             <h3>${nomeFormatado}</h3>
             <p>${descricao}</p>
             <button onclick="copyTemplate('${templateId}')">Copiar template YouTube</button>
             <pre id="${templateId}" style="display:none;">
-${youtubeTemplate(nomeFormatado, descricao, produtoDados.lojas)}
+${youtubeTemplate(produtoNome, descricao, produtoDados.lojas)}
             </pre>
             <table>
               <tr>
@@ -90,8 +121,7 @@ ${youtubeTemplate(nomeFormatado, descricao, produtoDados.lojas)}
               </tr>
       `;
 
-      for (const l of produtoDados.lojas) {
-        const urlRedir = await redirectReal(produtoNome, l.loja);
+      for (const l of produtoDados.lojas) {        
         const lojaHref = redirect(produtoNome, l.loja);
 
         html += `
