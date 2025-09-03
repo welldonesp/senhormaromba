@@ -53,6 +53,10 @@ footer {
   padding-bottom: 15px;
 }
 
+footer a {
+  color: #f1bf00;
+}
+
 .produto-header {
   flex-wrap: wrap;
   align-items: baseline;
