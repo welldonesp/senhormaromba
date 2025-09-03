@@ -87,6 +87,12 @@
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1sXjjZk" }
       ]
     },
+    "coqueteleira-darklab": {
+      "desc": "Essa Coqueteleira/Shaker tem 700ml. Misture seus suplementos na hora e em qualquer lugar! <br>Praticidade, resistência e capacidade de verdade pra quem treina pesado!",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2MPhKTb" }
+      ]
+    },
     "creatina-darklab": {
       "desc": "Creatina Monohidratada Pura 600g Dark Lab Unidade<br>Para quem leva suplementação a sério! <br>Compre agora a sua creatina custo-benefício diretamente da loja oficial Dark Lab no Mercado Livre, sem perder tempo! <br>Não espere ela acabar...",
       "lojas": [
