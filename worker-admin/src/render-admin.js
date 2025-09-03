@@ -25,14 +25,14 @@ function statusEmoji(status) {
 
 function htmlToText(str) {
   if (!str) return '';
-  // substitui <br> por quebra de linha
+  // substitui <br> por quebra de linha e remove HTML
   return str.replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]*>?/gm, '');
 }
 
 // Função que monta o template do YouTube
-function youtubeTemplate(nome, descricao, lojas) {
+function youtubeTemplate(nome, tit, descricao, lojas) {
   const lojasAtivas = lojas.filter(l => l.status === "0" || l.status === "1");
-  let text = `*${nome}* - ${htmlToText(descricao)}\n\n`;
+  let text = `*${tit || nome}* - ${htmlToText(descricao)}\n\n`;
   for (const l of lojasAtivas) {
     const lojaHref = redirect(nome, l.loja);
     text += `👉 [${l.loja}] ${lojaHref}\n\n`;
@@ -48,7 +48,7 @@ export async function renderAdminPage() {
     <head>
       <meta charset="UTF-8">
       <title>Administração - Produtos Senhor Maromba</title>
-      <link rel="stylesheet" href="${CSS_BASE}style-admin.css?v=5">
+      <link rel="stylesheet" href="${CSS_BASE}style-admin.css?v=6">
       <meta name="robots" content="noindex, nofollow">
     </head>
     <body>
@@ -92,6 +92,7 @@ export async function renderAdminPage() {
 
     for (const [produtoNome, produtoDados] of Object.entries(secaoProdutos)) {
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
+      const titulo = produtoDados.tit || nomeFormatado;
       const descricao = produtoDados.desc || '';
       const templateId = `template-${produtoNome}`;
 
@@ -104,13 +105,14 @@ export async function renderAdminPage() {
                data-src-jpg="${PRODUTOS_IMG_BASE}${produtoNome}.jpg"
                data-fallback-step="0"
                onerror="fallbackImg(this)"
-               alt="${nomeFormatado}">
+               alt="${titulo}">
           <div class="produto-info">
-            <h3>${nomeFormatado}</h3>
+            <p><strong>Código:</strong> ${produtoNome}</p>
+            <h3>${titulo}</h3>
             <p>${descricao}</p>
             <button onclick="copyTemplate('${templateId}')">Copiar template YouTube</button>
             <pre id="${templateId}" style="display:none;">
-${youtubeTemplate(produtoNome, descricao, produtoDados.lojas)}
+${youtubeTemplate(produtoNome, titulo, descricao, produtoDados.lojas)}
             </pre>
             <table>
               <tr>
