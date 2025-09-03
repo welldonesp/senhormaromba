@@ -162,7 +162,7 @@ footer {
   .produto-body {
     flex-direction: row; /* lado a lado */
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
   }
 
   .produto-img {

@@ -32,7 +32,7 @@ export async function renderPage() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Loja Senhor Maromba</title>
       <link rel="icon" href="${ASSETS_BASE}/favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="${CSS_BASE}style.css?v=8">
+      <link rel="stylesheet" href="${CSS_BASE}style.css?v=10">
     </head>
     <body>
       <div class="header">
