@@ -80,7 +80,7 @@
 
   "Cintos": {
     "cinto-custo-beneficio": {
-      "tit": "Cinto Custo Benefício",
+      "tit": "Cinto custo-benefício",
       "desc": "A qualidade desse cinto impressiona muito pelo preço que é cobrado. <br>Possui apoio para a lombar, protege a coluna e mantém a postura firme sob grande esforço. <br>Cumpre o que promete!",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/42bax16" },
