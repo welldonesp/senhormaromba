@@ -147,3 +147,43 @@ footer {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* ===== RESPONSIVO PARA CELULAR ===== */
+@media (max-width: 767px) {
+  .produto-container {
+    flex-direction: column; /* imagem abaixo do texto */
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .produto-header {
+    order: 1; /* título e descrição primeiro */
+  }
+
+  .produto-img {
+    order: 2; /* imagem abaixo */
+    width: 200px;  /* dobro do tamanho atual */
+    height: 200px; /* mantém proporção quadrada */
+  }
+
+  .produto-info {
+    width: 100%; /* garante ocupar largura total */
+  }
+
+  .links {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .produto-header h3 {
+    font-size: 1.3em; /* aumenta título */
+  }
+
+  .produto-desc {
+    font-size: 1.1em; /* aumenta descrição */
+  }
+
+  a {
+    font-size: 1.3em; /* aumenta links de loja */
+  }
+}
