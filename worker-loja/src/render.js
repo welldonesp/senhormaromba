@@ -67,7 +67,9 @@ export async function renderPage() {
             <div class="produto-info">
               <div class="produto-header">
                 <h3>${titulo}</h3>
+              </div>
 
+              <div class="produto-body">
                 <img class="produto-img"
                     src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
                     data-src-webp="${ASSETS_BASE}/produtos/${produtoNome}.webp"
@@ -81,9 +83,9 @@ export async function renderPage() {
 
                 <p class="produto-desc">${descricao}</p>
               </div>
+
               <div class="links">
       `;
-
 
       for (const l of lojasAtivas) {
         const lojaHref = redirect(produtoNome, l.loja);

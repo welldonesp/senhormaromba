@@ -51,24 +51,24 @@ footer {
 }
 
 .produto-header {
-  flex-wrap: wrap; /* permite quebrar se ficar apertado */
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 4px;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .produto-header h3 {
   margin: 0;
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: #fff;
   font-weight: 600;
 }
 
 .produto-desc {
-  font-size: 0.9em;
+  font-size: 0.95em;
   margin-block-start: 0.2em;
   color: #ccc;
-  flex: 1; /* ocupa o espaço restante */
+  flex: 1;
 }
 
 .produto-desc b {
@@ -77,15 +77,22 @@ footer {
 
 .produto-container {
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
+  flex-direction: column; /* mobile primeiro */
+  gap: 10px;
+}
+
+.produto-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .produto-img {
-  width: 100px;   /* tamanho fixo para todas */
-  height: 100px;  /* força padrão visual */
-  object-fit: contain; /* mantém proporção sem cortar */
-  background: #222; /* fundo neutro para imagens menores */
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  background: #222;
   border-radius: 5px;
   padding: 5px;
   cursor: pointer;
@@ -98,6 +105,7 @@ footer {
 
 .produto-info {
   flex: 1;
+  width: 100%;
 }
 
 .loja-link {
@@ -148,42 +156,21 @@ footer {
   cursor: pointer;
 }
 
-/* ===== RESPONSIVO PARA CELULAR ===== */
-@media (max-width: 767px) {
-  .produto-container {
-    flex-direction: column; /* empilha os itens */
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+  .produto-body {
+    flex-direction: row; /* lado a lado */
     align-items: flex-start;
-    gap: 10px;
-  }
-
-  .produto-header h3 {
-    order: 1; /* título primeiro */
-    font-size: 1.3em;
+    gap: 20px;
   }
 
   .produto-img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    margin: 6px 0;
+    width: 120px;
+    height: 120px;
   }
 
   .produto-desc {
-    order: 3; /* descrição após a imagem */
-    font-size: 1.1em;
-  }
-
-  .links {
-    order: 4; /* links por último */
-    justify-content: flex-start;
-    gap: 10px;
-  }
-
-  a {
-    font-size: 1.3em; /* aumenta links de loja */
-  }
-
-  .produto-info {
-    width: 100%; /* ocupa largura total */
+    flex: 1;
+    text-align: left;
   }
 }
