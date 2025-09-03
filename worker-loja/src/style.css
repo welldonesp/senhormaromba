@@ -151,39 +151,39 @@ footer {
 /* ===== RESPONSIVO PARA CELULAR ===== */
 @media (max-width: 767px) {
   .produto-container {
-    flex-direction: column; /* imagem abaixo do texto */
+    flex-direction: column; /* empilha os itens */
     align-items: flex-start;
     gap: 10px;
   }
 
-  .produto-header {
-    order: 1; /* título e descrição primeiro */
+  .produto-header h3 {
+    order: 1; /* título primeiro */
+    font-size: 1.3em;
   }
 
   .produto-img {
-    order: 2; /* imagem abaixo */
+    order: 2; /* imagem entre título e descrição */
     width: 200px;  /* dobro do tamanho atual */
-    height: 200px; /* mantém proporção quadrada */
+    height: 200px;
+    margin: 5px 0;
   }
 
-  .produto-info {
-    width: 100%; /* garante ocupar largura total */
+  .produto-desc {
+    order: 3; /* descrição após a imagem */
+    font-size: 1.1em;
   }
 
   .links {
+    order: 4; /* links por último */
     justify-content: flex-start;
     gap: 10px;
   }
 
-  .produto-header h3 {
-    font-size: 1.3em; /* aumenta título */
-  }
-
-  .produto-desc {
-    font-size: 1.1em; /* aumenta descrição */
-  }
-
   a {
     font-size: 1.3em; /* aumenta links de loja */
+  }
+
+  .produto-info {
+    width: 100%; /* ocupa largura total */
   }
 }
