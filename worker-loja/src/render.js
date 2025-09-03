@@ -28,8 +28,9 @@ export async function renderPage() {
     <html lang="pt-BR">
     <head>
       <meta charset="UTF-8">
-      <title>Loja Senhor Maromba</title>
       <meta name="description" content="Pare de gastar com produtos ruins! Loja Senhor Maromba tem tudo para musculação testado de verdade. Compre agora!">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Loja Senhor Maromba</title>
       <link rel="icon" href="${ASSETS_BASE}/favicon.ico" type="image/x-icon">
       <link rel="stylesheet" href="${CSS_BASE}style.css?v=6">
     </head>
