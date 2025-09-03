@@ -2,12 +2,14 @@
   "Barras e Anilhas": {
 
     "kit-2-anilhas-500-gramas": {
+      "tit": "Kit com 2 anilhas de 500 gramas",
       "desc": "Par de anilhas de 1/2 kg para levar seu treino ao limite! <br>Imagine poder aumentar apenas 1/2 kg na elevação lateral ou 1 kg no agachamento e levantamento terra!",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1Mby9Lu" }
       ]
     },
     "anilha-20-kg-ferro-fundido": {
+      "tit": "Anilha de 20 kg em ferro fundido",
       "desc": "Aconselho as anilhas pintadas pela economia e durabilidade. <br>As emborrachadas depois de um tempo perdem o revestimento, deixando o metal por baixo sem proteção.",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/45Kr8LG" },
@@ -15,6 +17,7 @@
       ]
     },
     "barra-reta-2-metros": {
+      "tit": "Barra reta maciça com 2 metros",
       "desc": "Ela é maciça em tamanho adequado para uso em rack, execução de supino, agachamento e levantamento terra. <br>Possui bom espaço para anilhas.",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4ngwkwN" },
@@ -22,6 +25,7 @@
       ]
     },
     "barra-halter-roscavel": {
+      "tit": "2 barras de halter roscável",
       "desc": "Barras de Halter 40 cm maciça cromada com rosca. Não deixe as anilhas cair em seu rosto!",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4ngwkwN" },
@@ -33,18 +37,21 @@
 
   "Equipamentos": {
     "banco-regulavel": {
+      "tit": "Banco regulável",
       "desc": "Banco Regulável Prime Revolution com 9 posições: reto, inclinado e declinado",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1jA9uvm" }
       ]
     },
     "suporte-agachamento": {
+      "tit": "Suporte e Rack de agachamento",
       "desc": "Suporte Cavalete Agachamento e Supino - Power Rack + Suporte Proteção + Anilheiro",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/158BJvB" }
       ]
     },
     "suporte-flexao-nordica": {
+      "tit": "Suporte para Flexão Nórdica",
       "desc": "Uma opção prática e confortável para realizar a flexão nórdica. <br>Suporte confortável com posicionamento estável e seguro.",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/25xfoBQ" }
@@ -54,6 +61,7 @@
 
   "Straps": {
     "strap-tradicional": {
+      "tit": "Strap Tradicional",
       "desc": "Ideal para iniciantes e treinos de puxada moderada.",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4mGRlAM" },
@@ -61,6 +69,7 @@
       ]
     },
     "strap-figure-eight": {
+      "tit": "Strap Figure Eight",
       "desc": "Perfeito para pegadas pesadas e levantamento intenso.",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/41pBoXa" },
@@ -71,6 +80,7 @@
 
   "Luvas": {
     "luvas-treino-premium": {
+      "tit": "Luvas de Treino Premium",
       "desc": "Proteção extra e melhor aderência.",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HMLSt0" },
@@ -81,6 +91,7 @@
 
   "Suplementos": {
     "balanca-de-precisao": {
+      "tit": "Balança de precisão",
       "desc": "Balança Digital de Precisão 0.5 gramas, com capacidade máxima de 500 gramas. <br>Para quem leva suplementação a sério! <br>Essencial para nunca errar a dose dos seus suplementos! <br>É pequena e cabe no seu bolso.",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4p2nuUT"},
@@ -88,12 +99,14 @@
       ]
     },
     "coqueteleira-darklab": {
+      "tit": "Coqueleteira Dark Lab",
       "desc": "Essa Coqueteleira/Shaker tem 700ml. Misture seus suplementos na hora e em qualquer lugar! <br>Praticidade, resistência e capacidade de verdade pra quem treina pesado!",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2MPhKTb" }
       ]
     },
     "creatina-darklab": {
+      "tit": "Creatina 600g Dark Lab",
       "desc": "Creatina Monohidratada Pura 600g Dark Lab Unidade<br>Para quem leva suplementação a sério! <br>Compre agora a sua creatina custo-benefício diretamente da loja oficial Dark Lab no Mercado Livre, sem perder tempo! <br>Não espere ela acabar...",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1KhXNkj" }
@@ -103,6 +116,7 @@
 
   "Diversos": {
     "magnesio-liquido": {
+      "tit": "Magnésio Líquido",
       "desc": "Evita escorregões e melhora seu desempenho.",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HSQTQL"},
@@ -110,6 +124,7 @@
       ]
     },
     "rolo-de-massagem-e-liberacao-miofascial": {
+      "tit": "Rolo de massagem e liberação miofascial",
       "desc": "Perfeito para soltar a musculatura e aliviar tensões causadas por treinos intensos, movimentos repetitivos ou fadiga muscular. Ideal para usar antes e depois do treino, ajudando a preparar o corpo e acelerar a recuperação.",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4p9Hqp8"},

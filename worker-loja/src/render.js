@@ -17,7 +17,7 @@ function lojaIcon(loja) {
 }
 
 function stripHTML(str) {
-  return str ? str.replace(/<[^>]*>?/gm, '') : ''; // remove tags
+  return str ? str.replace(/<[^>]*>?/gm, '') : '';
 }
 
 export async function renderPage() {
@@ -53,7 +53,9 @@ export async function renderPage() {
       const lojasAtivas = produtoDados.lojas.filter(l => l.status === "0" || l.status === "1");
       if (lojasAtivas.length === 0) continue;
 
+      // usa tit se existir, senão fallback para nomeFormatado
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
+      const titulo = produtoDados.tit || nomeFormatado;
       const descricao = produtoDados.desc || '';
       const descricaoAlt = stripHTML(descricao);
 
@@ -67,14 +69,14 @@ export async function renderPage() {
                data-src-png="${ASSETS_BASE}/produtos/${produtoNome}.png"
                data-src-jpg="${ASSETS_BASE}/produtos/${produtoNome}.jpg"
                data-fallback-step="0"
-               alt="${nomeFormatado} - ${descricaoAlt} | Loja Senhor Maromba"
-               title="${nomeFormatado} para musculação - Loja Senhor Maromba"
+               alt="${titulo} - ${descricaoAlt} | Loja Senhor Maromba"
+               title="${titulo} para musculação - Loja Senhor Maromba"
                onclick="openModal(this)"
                onerror="fallbackImg(this)">
           
           <div class="produto-info">
             <div class="produto-header">
-              <h3>${nomeFormatado}</h3>
+              <h3>${titulo}</h3>
               <p class="produto-desc">${descricao}</p>
             </div>
             <div class="links">
@@ -94,7 +96,6 @@ export async function renderPage() {
     }
   }
 
-  // Modal + fallback
   html += `
     <div id="imgModal" class="modal" aria-hidden="true">
       <span class="modal-close" onclick="closeModal()" role="button" aria-label="Fechar">&times;</span>
@@ -134,7 +135,6 @@ export async function renderPage() {
         if (typeof elOrSrc === 'string') {
           src = elOrSrc;
         } else {
-          // pega a imagem realmente renderizada
           src = elOrSrc.currentSrc || elOrSrc.src;
         }
         modalImg.src = src;
