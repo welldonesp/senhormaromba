@@ -39,7 +39,8 @@ export async function renderPage() {
         <img src="${ASSETS_BASE}/logotipo.png" alt="Logotipo Senhor Maromba" class="logo">
         <h1>Loja Senhor Maromba 🔥</h1>
       </div>
-      <p>Produtos recomendados e testados nos treinos 💪</p>
+      <p>Pare de gastar com produtos ruins!</p>
+      <p>Tudo para musculação testado de verdade. 💪</p>
   `;
 
   for (const [secaoNome, secaoProdutos] of Object.entries(produtos)) {
@@ -61,27 +62,28 @@ export async function renderPage() {
       const descricaoAlt = stripHTML(descricao);
 
       html += `
-      <div class="produto">
-        <div class="produto-container">
+        <div class="produto">
+          <div class="produto-container">
+            <div class="produto-info">
+              <div class="produto-header">
+                <h3>${titulo}</h3>
 
-          <img class="produto-img"
-               src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
-               data-src-webp="${ASSETS_BASE}/produtos/${produtoNome}.webp"
-               data-src-png="${ASSETS_BASE}/produtos/${produtoNome}.png"
-               data-src-jpg="${ASSETS_BASE}/produtos/${produtoNome}.jpg"
-               data-fallback-step="0"
-               alt="${titulo} - ${descricaoAlt} | Loja Senhor Maromba"
-               title="${titulo} para musculação - Loja Senhor Maromba"
-               onclick="openModal(this)"
-               onerror="fallbackImg(this)">
-          
-          <div class="produto-info">
-            <div class="produto-header">
-              <h3>${titulo}</h3>
-              <p class="produto-desc">${descricao}</p>
-            </div>
-            <div class="links">
+                <img class="produto-img"
+                    src="${ASSETS_BASE}/produtos/${produtoNome}.webp"
+                    data-src-webp="${ASSETS_BASE}/produtos/${produtoNome}.webp"
+                    data-src-png="${ASSETS_BASE}/produtos/${produtoNome}.png"
+                    data-src-jpg="${ASSETS_BASE}/produtos/${produtoNome}.jpg"
+                    data-fallback-step="0"
+                    alt="${titulo} - ${descricaoAlt} | Loja Senhor Maromba"
+                    title="${titulo} para musculação - Loja Senhor Maromba"
+                    onclick="openModal(this)"
+                    onerror="fallbackImg(this)">
+
+                <p class="produto-desc">${descricao}</p>
+              </div>
+              <div class="links">
       `;
+
 
       for (const l of lojasAtivas) {
         const lojaHref = redirect(produtoNome, l.loja);

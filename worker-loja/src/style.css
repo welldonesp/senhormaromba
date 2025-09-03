@@ -162,10 +162,10 @@ footer {
   }
 
   .produto-img {
-    order: 2; /* imagem entre título e descrição */
-    width: 200px;  /* dobro do tamanho atual */
+    width: 200px;
     height: 200px;
-    margin: 5px 0;
+    object-fit: contain;
+    margin: 6px 0;
   }
 
   .produto-desc {
