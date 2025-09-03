@@ -39,8 +39,9 @@ export async function renderPage() {
         <img src="${ASSETS_BASE}/logotipo.png" alt="Logotipo Senhor Maromba" class="logo">
         <h1>Loja Senhor Maromba 🔥</h1>
       </div>
-      <p>Pare de gastar com produtos ruins!</p>
-      <p>Tudo para musculação testado de verdade. 💪</p>
+      <br>
+      Pare de gastar com produtos ruins!<br>
+      Produtos para quem treina sério. 💪
   `;
 
   for (const [secaoNome, secaoProdutos] of Object.entries(produtos)) {
@@ -108,7 +109,8 @@ export async function renderPage() {
     </div>
 
     <footer>
-      Todos os links são afiliados, o que me ajuda a continuar produzindo conteúdo.<br>
+      Todos os links são afiliados.<br>
+      Sua compra apoia meu conteúdo! 🙌<br>
       Conheça o canal: <a href="https://www.youtube.com/@SenhorMaromba" target="_blank">Senhor Maromba</a>
     </footer>
 
