@@ -32,7 +32,7 @@ export async function renderPage() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Loja Senhor Maromba</title>
       <link rel="icon" href="${ASSETS_BASE}/favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="${CSS_BASE}style.css?v=10">
+      <link rel="stylesheet" href="${CSS_BASE}style.css?v=11">
     </head>
     <body>
       <div class="header">
@@ -109,6 +109,7 @@ export async function renderPage() {
     <footer>
       Todos os links são afiliados.<br>
       Sua compra apoia meu conteúdo! 🙌<br>
+      <br>
       Conheça o canal: <a href="https://www.youtube.com/@SenhorMaromba" target="_blank">Senhor Maromba</a>
     </footer>
 
