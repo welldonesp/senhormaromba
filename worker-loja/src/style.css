@@ -3,7 +3,7 @@ body {
   font-size: 1.2em;
   background: #111;
   color: #eee;
-  padding: 20px;
+  padding: 10px;
   line-height: 1.5em;
 }
 
@@ -15,7 +15,7 @@ h1, h2 {
 .header {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .logo {

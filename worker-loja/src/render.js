@@ -39,8 +39,6 @@ export async function renderPage() {
         <img src="${ASSETS_BASE}/logotipo.png" alt="Logotipo Senhor Maromba" class="logo">
         <h1>Loja Senhor Maromba 🔥</h1>
       </div>
-      <br>
-      Pare de gastar com produtos ruins!<br>
       Produtos para quem treina sério. 💪
   `;
 
