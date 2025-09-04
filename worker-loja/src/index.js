@@ -32,22 +32,6 @@ export default {
         return Response.redirect(`${_BASE}/robots.txt`, 301);
     }
 
-    // Endpoint para site.webmanifest
-    if (url.pathname === '/site.webmanifest') {
-      try {
-        const manifestRes = await fetch(`${_BASE}/site.webmanifest`);
-        if (!manifestRes.ok) {
-          return new Response('Erro ao carregar manifest', { status: 500 });
-        }
-        const manifest = await manifestRes.text();
-        return new Response(manifest, {
-          headers: { 'Content-Type': 'application/manifest+json; charset=UTF-8' },
-        });
-      } catch (err) {
-        return new Response('Erro interno ao servir manifest', { status: 500 });
-      }
-    }
-
     // Aliases para ícones na raiz
     const aliases = {
       '/favicon.ico': '/assets/favicon.ico',
