@@ -75,7 +75,7 @@ export default {
     // Endpoint para favicon.ico
     if (url.pathname === '/favicon.ico') {
       try {
-        const faviconRes = await fetch(`${_BASE}/favicon.ico`);
+        const faviconRes = await fetch(`${_BASE}/assets/favicon.ico`);
         if (!faviconRes.ok) {
           return new Response('Erro ao carregar favicon', { status: 500 });
         }
