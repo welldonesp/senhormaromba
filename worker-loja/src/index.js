@@ -27,6 +27,16 @@ export default {
       }
     }
 
+    // Endpoint para robots.txt
+    if (url.pathname === '/robots.txt') {
+      const robotsContent = await fetch(`${_BASE}/robots.txt`);
+
+      return new Response(robotsContent, {
+        headers: { 'Content-Type': 'text/plain; charset=UTF-8' }
+      });
+    }
+
+
     // Endpoint para favicon.ico
     if (url.pathname === '/favicon.ico') {
       try {
@@ -47,7 +57,10 @@ export default {
     if (!produto) {
       const html = await renderPage();
       return new Response(html, {
-        headers: { 'Content-Type': 'text/html; charset=UTF-8' }
+        headers: {
+          'Content-Type': 'text/html; charset=UTF-8',
+          'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+        }
       });
     }
 

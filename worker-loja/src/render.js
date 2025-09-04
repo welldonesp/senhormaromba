@@ -28,6 +28,7 @@ export async function renderPage() {
     <html lang="pt-BR">
     <head>
       <meta charset="UTF-8">
+      <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
       <meta name="description" content="Pare de gastar com produtos ruins! Loja Senhor Maromba tem tudo para musculação testado de verdade. Compre agora!">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Loja Senhor Maromba</title>
@@ -98,7 +99,7 @@ export async function renderPage() {
 
         html += `
           <a class="loja-link" href="${lojaHref}" target="_blank">
-            <img src="${lojaIcon(l.loja)}" alt="${l.loja}">${l.loja}
+            <img src="${lojaIcon(l.loja)}" alt="${titulo} em ${l.loja}">${l.loja}
           </a>
         `;
       }
