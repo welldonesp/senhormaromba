@@ -26,10 +26,17 @@
     },
     "barra-halter-roscavel": {
       "tit": "2 barras de halter roscável",
-      "desc": "Barras de Halter 40 cm maciça cromada com rosca. Não deixe as anilhas cair em seu rosto!",
+      "desc": "Barras de Halter 40 cm maciça cromada com rosca. <br>Não deixe as anilhas cair em seu rosto!",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4ngwkwN" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/22Fh3LZ" }
+      ]
+    },
+    "barra-hexagonal": {
+      "tit": "Barra Hexagonal com Ponteira Standard",
+      "desc": "Equipamento indispensável para quem busca performance e segurança máxima no treino! <br>Permite realizar agachamento, levantamento terra, agachamento búlgaro e encolhimento de ombros.",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/32eGKAN" }
       ]
     }
 
