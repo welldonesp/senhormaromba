@@ -141,6 +141,13 @@
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
       ]
     },
+    "step-eva": {
+      "tit": "Step Eva C90 X L28 X A14",
+      "desc": "Mais útil do que você imagina! <br>Indispensável para treinar em casa, inclusive para quem pega pesado. <br>Firme, com boa altura e estabilidade.",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1XZcZcH" }
+      ]
+    },
     "rolo-de-massagem-e-liberacao-miofascial": {
       "tit": "Rolo de massagem e liberação miofascial",
       "desc": "Perfeito para soltar a musculatura e aliviar tensões causadas por treinos intensos, movimentos repetitivos ou fadiga muscular. <br>Ideal para usar antes e depois do treino, ajudando a preparar o corpo e acelerar a recuperação.",
