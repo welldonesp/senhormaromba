@@ -31,8 +31,15 @@ export async function renderPage() {
       <meta name="description" content="Pare de gastar com produtos ruins! Loja Senhor Maromba tem tudo para musculação testado de verdade. Compre agora!">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Loja Senhor Maromba</title>
-      <link rel="icon" href="${ASSETS_BASE}/favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="${CSS_BASE}style.css?v=14">
+
+      <!-- FAVICONS -->
+      <link rel="icon" href="/favicon.ico" sizes="any">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="manifest" href="${ASSETS_BASE}/site.webmanifest">
+
+      <link rel="stylesheet" href="${CSS_BASE}style.css?v=16">
     </head>
     <body>
       <div class="header">
