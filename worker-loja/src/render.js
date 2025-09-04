@@ -39,9 +39,18 @@ export async function renderPage() {
       <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
       <link rel="manifest" href="${ASSETS_BASE}/site.webmanifest">
-
       <link rel="stylesheet" href="${CSS_BASE}style.css?v=16">
-    </head>
+
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-20QTN1YSP8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-20QTN1YSP8');
+      </script>      
+
+      </head>
     <body>
       <div class="header">
         <img src="${ASSETS_BASE}/logotipo.png" alt="Logotipo Senhor Maromba" class="logo">
@@ -98,7 +107,14 @@ export async function renderPage() {
         const lojaHref = redirect(produtoNome, l.loja);
 
         html += `
-          <a class="loja-link" href="${lojaHref}" target="_blank">
+          <a class="loja-link" 
+            href="${lojaHref}" 
+            target="_blank"
+            onclick="gtag('event', 'click', {
+                event_category: 'loja',
+                event_label: '${l.loja}',
+                value: 1
+            });">
             <img src="${lojaIcon(l.loja)}" alt="${titulo} em ${l.loja}">${l.loja}
           </a>
         `;

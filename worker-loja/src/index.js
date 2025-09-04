@@ -29,11 +29,7 @@ export default {
 
     // Endpoint para robots.txt
     if (url.pathname === '/robots.txt') {
-      const robotsContent = await fetch(`${_BASE}/robots.txt`);
-
-      return new Response(robotsContent, {
-        headers: { 'Content-Type': 'text/plain; charset=UTF-8' }
-      });
+        return Response.redirect(`${_BASE}/robots.txt`, 301);
     }
 
 
