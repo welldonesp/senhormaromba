@@ -27,6 +27,22 @@ export default {
       }
     }
 
+    // Endpoint para favicon.ico
+    if (url.pathname === '/favicon.ico') {
+      try {
+        const faviconRes = await fetch(`${_BASE}/favicon.ico`);
+        if (!faviconRes.ok) {
+          return new Response('Erro ao carregar favicon', { status: 500 });
+        }
+        const favicon = await faviconRes.arrayBuffer();
+        return new Response(favicon, {
+          headers: { 'Content-Type': 'image/x-icon' },
+        });
+      } catch (err) {
+        return new Response('Erro interno ao servir favicon', { status: 500 });
+      }
+    }
+
     // Página principal da loja
     if (!produto) {
       const html = await renderPage();
