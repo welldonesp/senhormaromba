@@ -32,30 +32,6 @@ export default {
         return Response.redirect(`${_BASE}/robots.txt`, 301);
     }
 
-
-    // Servir arquivos estáticos da pasta assets
-    if (url.pathname.startsWith('/assets/')) {
-      try {
-        const assetRes = await fetch(`${_BASE}${url.pathname}`);
-        if (!assetRes.ok) {
-          return new Response('Erro ao carregar asset', { status: 404 });
-        }
-
-        // Descobrir content-type pelo tipo do arquivo
-        let contentType = 'application/octet-stream';
-        if (url.pathname.endsWith('.png')) contentType = 'image/png';
-        if (url.pathname.endsWith('.jpg') || url.pathname.endsWith('.jpeg')) contentType = 'image/jpeg';
-        if (url.pathname.endsWith('.webp')) contentType = 'image/webp';
-        if (url.pathname.endsWith('.json') || url.pathname.endsWith('.webmanifest')) contentType = 'application/manifest+json';
-
-        return new Response(await assetRes.arrayBuffer(), {
-          headers: { 'Content-Type': contentType }
-        });
-      } catch (err) {
-        return new Response('Erro interno ao servir asset', { status: 500 });
-      }
-    }
-
     // Endpoint para site.webmanifest
     if (url.pathname === '/site.webmanifest') {
       try {
@@ -72,20 +48,28 @@ export default {
       }
     }
 
-    // Endpoint para favicon.ico
-    if (url.pathname === '/favicon.ico') {
-      try {
-        const faviconRes = await fetch(`${_BASE}/assets/favicon.ico`);
-        if (!faviconRes.ok) {
-          return new Response('Erro ao carregar favicon', { status: 500 });
-        }
-        const favicon = await faviconRes.arrayBuffer();
-        return new Response(favicon, {
-          headers: { 'Content-Type': 'image/x-icon' },
-        });
-      } catch (err) {
-        return new Response('Erro interno ao servir favicon', { status: 500 });
+    // Aliases para ícones na raiz
+    const aliases = {
+      '/favicon.ico': '/assets/favicon.ico',
+      '/favicon-16x16.png': '/assets/favicon-16x16.png',
+      '/favicon-32x32.png': '/assets/favicon-32x32.png',
+      '/apple-touch-icon.png': '/assets/apple-touch-icon.png',
+      '/android-chrome-192x192.png': '/assets/android-chrome-192x192.png',
+      '/android-chrome-512x512.png': '/assets/android-chrome-512x512.png',
+      '/logotipo.png': '/assets/logotipo.png'
+    };
+
+    if (aliases[url.pathname]) {
+      const assetRes = await fetch(`${_BASE}${aliases[url.pathname]}`);
+      if (!assetRes.ok) {
+        return new Response('Erro ao carregar asset', { status: 404 });
       }
+      let contentType = 'application/octet-stream';
+      if (url.pathname.endsWith('.png')) contentType = 'image/png';
+      if (url.pathname.endsWith('.ico')) contentType = 'image/x-icon';
+      return new Response(await assetRes.arrayBuffer(), {
+        headers: { 'Content-Type': contentType }
+      });
     }
 
     // Página principal da loja
