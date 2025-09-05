@@ -99,7 +99,8 @@
       "desc": "Aguenta carga insana, até 5 toneladas. <br>Use em barra fixa, paralelas, belt squat, panturrilha e muito mais. <br>Material bruto, feito pra marombeiro raiz. <br>👉 Garanta o seu e pendure peso sem medo! <br><b>⚠️ Lembre de pedir ao vendedor: corte e costura no comprimento de 1,20m.</b>",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2RtuBgA" }
-      ]
+      ],
+      "relacionados": ["corrente", "gancho-s"]
     }
   },
 
@@ -146,14 +147,16 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HSQTQL"},
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
-      ]
+      ],
+      "relacionados": []
     },
     "step-eva": {
       "tit": "Step Eva C90 X L28 X A14",
       "desc": "Mais útil do que você imagina! <br>Firme, estável e na altura certa pra treinar em casa ou na academia. <br>Indispensável até pra quem pega pesado. 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1XZcZcH" }
-      ]
+      ],
+      "relacionados": []
     },
     "gancho-s": {
       "tit": "Gancho em S para pendurar pesos",
@@ -176,7 +179,8 @@
       "desc": "Feita de aço galvanizado 5 mm, é versátil e resistente, suportando até 350 kg. <br>⚠️ O anúncio é de <b>1 metro</b>, mas recomendo comprar a corrente com <b>2 metros</b> para pendurar peso com total liberdade e ajustar o treino como quiser. <br>💪 Treine pesado com o tamanho certo!",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/17GGqBm" }
-      ]
+      ],
+      "relacionados": []
     },
     "rolo-de-massagem-e-liberacao-miofascial": {
       "tit": "Rolo de massagem e Liberação Miofascial",
@@ -184,7 +188,8 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4p9Hqp8"},
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1nCUWoD" }
-      ]
+      ],
+      "relacionados": []
     }
   }
 }
