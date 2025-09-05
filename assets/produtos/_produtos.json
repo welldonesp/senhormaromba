@@ -3,14 +3,14 @@
 
     "kit-2-anilhas-500-gramas": {
       "tit": "Kit com 2 anilhas de 500 gramas",
-      "desc": "Par de anilhas de 1/2 kg para levar seu treino ao limite! <br>Imagine poder aumentar apenas 1/2 kg na elevação lateral ou 1 kg no agachamento e levantamento terra!",
+      "desc": "Treine pesado ao extremo! <br> Aumente a carga <b>apenas 500 g ou 1 kg</b> e leve cada repetição ao limite. <br>Perfeito pra elevação lateral, agachamento, supino e levantamento terra com evolução contínua!",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1Mby9Lu" }
       ]
     },
     "anilha-20-kg-ferro-fundido": {
       "tit": "Anilha de 20 kg em ferro fundido",
-      "desc": "Aconselho as anilhas pintadas pela economia e durabilidade. <br>As emborrachadas depois de um tempo perdem o revestimento, deixando o metal por baixo sem proteção.",
+      "desc": "Resistência e estabilidade! <br>Ao contrário das emborrachadas, que com o tempo rasgam e deixam o metal sem proteção, essas permanecem firmes na barra e duram muito mais. <br>Treine pesado sem se preocupar com as anilhas!",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/45Kr8LG" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2QU8roD" }
@@ -18,7 +18,7 @@
     },
     "barra-reta-2-metros": {
       "tit": "Barra reta maciça com 2 metros",
-      "desc": "Ela é maciça em tamanho adequado para uso em rack, execução de supino, agachamento e levantamento terra. <br>Possui bom espaço para anilhas.",
+      "desc": "Resistência total e tamanho perfeito! <br>Ideal para supino, agachamento, levantamento terra e qualquer treino pesado. <br>Treine sem errar a barra, só foco na carga! 💪",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4ngwkwN" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2PLyWeE" }
@@ -26,7 +26,7 @@
     },
     "barra-halter-roscavel": {
       "tit": "2 barras de halter roscável",
-      "desc": "Barras de Halter 40 cm maciça cromada com rosca. <br>Não deixe as anilhas cair em seu rosto!",
+      "desc": "40 cm cromadas e maciças! <br> Segurança total: rosca firme pra não deixar anilhas caírem no seu rosto. <br>Treine pesado sem medo!",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4ngwkwN" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/22Fh3LZ" }
@@ -34,7 +34,7 @@
     },
     "barra-hexagonal": {
       "tit": "Barra Hexagonal com Ponteira Standard",
-      "desc": "Equipamento indispensável para quem busca performance e segurança máxima no treino! <br>Permite realizar agachamento, levantamento terra, agachamento búlgaro e encolhimento de ombros.",
+      "desc": "Performance e segurança máxima! <br>Perfeita para agachamento, levantamento terra, agachamento búlgaro e encolhimento de ombros. <br>Treine pesado com confiança e controle total! 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/32eGKAN" }
       ]
@@ -45,7 +45,7 @@
   "Equipamentos": {
     "banco-regulavel": {
       "tit": "Banco regulável",
-      "desc": "Banco Regulável Prime Revolution com 9 posições: reto, inclinado e declinado",
+      "desc": "Banco Regulável Prime Revolution: 9 posições para treinar como quiser! <br>Reto, inclinado ou declinado, perfeito pra agachamento de ombro, supino e exercícios variados. <br>Resistente, firme e pronto pra treino pesado! 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1jA9uvm" }
       ]
