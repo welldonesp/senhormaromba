@@ -121,24 +121,27 @@ export async function renderPage() {
 
       html += `</div>`;
 
-  // Produtos relacionados
-  if (produtoDados.relacionados && produtoDados.relacionados.length > 0) {
-    html += '<div class="produto-relacionados">';
-    html += '<span class="relacionados-titulo">👉 Veja também:</span>';
+      // Produtos relacionados
+      if (produtoDados.relacionados && produtoDados.relacionados.length > 0) {
+        html += '<div class="produto-relacionados">';
+        html += '<span class="relacionados-titulo">👉 Veja também:</span>';
 
-    html += produtoDados.relacionados.map(r => {
-      let rProduto = secaoProdutos[r] || Object.values(produtos).flatMap(s => s[r])[0];
-      const rTitulo = rProduto?.tit || capitalizeWords(r.replace(/-/g, " "));
-      return `
-        <a class="loja-link relacionado-link" 
-          href="#${r}" 
-          onclick="document.getElementById('${r}').scrollIntoView({behavior:'smooth'})">
-          <img src="${ASSETS_BASE}/icones/relacionado.png" alt="Relacionado">${rTitulo}
-        </a>
-      `;
-    }).join(' ');
+        html += produtoDados.relacionados.map(r => {
+          let rProduto = secaoProdutos[r] || Object.values(produtos).flatMap(s => s[r])[0];
+          const rTitulo = rProduto?.tit || capitalizeWords(r.replace(/-/g, " "));
+          return `
+            <a class="loja-link relacionado-link" 
+              href="#${r}" 
+              onclick="document.getElementById('${r}').scrollIntoView({behavior:'smooth'})">${rTitulo}
+            </a>
+          `;
+        }).join(' ');
 
-    html += '</div>';
+        html += '</div>';
+      }
+
+      html += `</div></div></div>`;
+    }
   }
 
   html += `
