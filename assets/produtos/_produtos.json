@@ -160,16 +160,18 @@
       "desc": "Feito pra pendurar peso no corpo com total segurança. <br>Confeccionado em aço inox 8mm, aguenta até 650kg sem ceder! <br>Ideal pra usar com correntes no cinturão, barra fixa, paralelas ou até pra pendurar seu saco de pancadas. <br>Bruto, resistente e pronto pra carga pesada! 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/17GGqBm" }
-      ]
+      ],
+      "relacionados": ["corrente", "cinturao-pendurar-pesos"]
     },
     "2-gancho-s": {
       "tit": "Kit com 2 ganchos em S para pendurar pesos",
       "desc": "Pendure peso no corpo com segurança máxima ou use com correntes em barra fixa, paralelas e até no saco de pancadas. <br> Feitos em aço inox 8mm, cada gancho aguenta até 650kg! <br>Resistência brutal pra treinos pesados. 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/17GGqBm" }
-      ]
+      ],
+      "relacionados": ["corrente", "cinturao-pendurar-pesos"]
     },
-    "corrente-5mm": {
+    "corrente": {
       "tit": "Corrente para pendurar pesos",
       "desc": "Feita de aço galvanizado 5 mm, é versátil e resistente, suportando até 350 kg. <br>⚠️ O anúncio é de <b>1 metro</b>, mas recomendo comprar a corrente com <b>2 metros</b> para pendurar peso com total liberdade e ajustar o treino como quiser. <br>💪 Treine pesado com o tamanho certo!",
       "lojas": [
