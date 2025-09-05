@@ -116,8 +116,8 @@
 
   "Suplementos": {
     "balanca-de-precisao": {
-      "tit": "Balança de precisão",
-      "desc": "Balança Digital de Precisão 0.5 gramas, com capacidade máxima de 500 gramas. <br>Para quem leva suplementação a sério! <br>Essencial para nunca errar a dose dos seus suplementos! <br>É pequena e cabe no seu bolso.",
+      "tit": "Balança Digital de Precisão",
+      "desc": "Não erre nunca na dose da sua creatina, pré-treino ou qualquer suplemento. <br>Mede até 500g com precisão de 0,5g. <br>Compacta, prática e cabe no bolso. <br> Ferramenta obrigatória pra quem leva suplementação a sério! 💪",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4p2nuUT"},
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1sXjjZk" }
@@ -142,7 +142,7 @@
   "Diversos": {
     "magnesio-liquido": {
       "tit": "Magnésio Líquido",
-      "desc": "Evita escorregões e melhora seu desempenho.",
+      "desc": "🖐️ Chega de escorregar na barra! <br>Seca o suor, melhora a pegada e aumenta seu desempenho nos treinos. <br>Discreto, eficiente e aprovado pelos brutos. 💪",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HSQTQL"},
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
@@ -150,28 +150,28 @@
     },
     "step-eva": {
       "tit": "Step Eva C90 X L28 X A14",
-      "desc": "Mais útil do que você imagina! <br>Indispensável para treinar em casa, inclusive para quem pega pesado. <br>Firme, com boa altura e estabilidade.",
+      "desc": "Mais útil do que você imagina! <br>Firme, estável e na altura certa pra treinar em casa ou na academia. <br>Indispensável até pra quem pega pesado. 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1XZcZcH" }
       ]
     },
     "gancho-s": {
       "tit": "Gancho em aço inox formato S 8mm",
-      "desc": "Quer pendurar pesos no corpo ou saco de pancadas? Não se arrisque! <br>Use esse gancho em aço inox 316 que aguenta 650kg! <br>Perfeito para usar com correntes!",
+      "desc": "Feito pra pendurar peso no corpo com total segurança. <br>Aguenta até 650kg sem ceder! <br>Ideal pra usar com correntes no cinturão, barra fixa, paralelas ou até pra pendurar seu saco de pancadas. <br>Bruto, resistente e pronto pra carga pesada! 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/17GGqBm" }
       ]
     },
     "2-gancho-s": {
       "tit": "Kit com 2 ganchos em aço inox formato S 8mm",
-      "desc": "Quer pendurar pesos no corpo ou saco de pancadas? Não se arrisque! <br>Use esses ganchos em aço inox 316 que aguentam 650kg cada! <br>Perfeitos para usar com correntes!",
+      "desc": "Pendure peso no corpo com segurança máxima ou use com correntes em barra fixa, paralelas e até no saco de pancadas. <br> Cada gancho aguenta até 650kg! <br>Resistência brutal pra treinos pesados. 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/17GGqBm" }
       ]
     },
     "rolo-de-massagem-e-liberacao-miofascial": {
-      "tit": "Rolo de massagem e liberação miofascial",
-      "desc": "Perfeito para soltar a musculatura e aliviar tensões causadas por treinos intensos, movimentos repetitivos ou fadiga muscular. <br>Ideal para usar antes e depois do treino, ajudando a preparar o corpo e acelerar a recuperação.",
+      "tit": "Rolo de massagem e Liberação Miofascial",
+      "desc": "Solta a musculatura, alivia tensões e acelera a recuperação. <br> Perfeito antes e depois do treino pesado. <br> Treine forte, recupere mais rápido! 💪",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4p9Hqp8"},
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1nCUWoD" }
