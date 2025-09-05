@@ -133,7 +133,8 @@ footer a {
 
 /* PRODUTOS RELACIONADOS */
 .produto-relacionados {
-  margin-top: 10px;
+    margin-top: 15px;
+    line-height: 1em;
 }
 
 .relacionados-titulo {
@@ -149,6 +150,7 @@ footer a {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin-top: 0px;
 }
 
 .relacionados-list li {
