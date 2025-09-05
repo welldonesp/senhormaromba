@@ -131,37 +131,37 @@ footer a {
   object-fit: contain;
 }
 
+/* PRODUTOS RELACIONADOS */
 .produto-relacionados {
   margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
 }
 
 .relacionados-titulo {
   font-weight: bold;
   color: #f1bf00;
-  margin-right: 5px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.relacionados-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.relacionados-list li {
 }
 
 .relacionado-link {
   font-size: 1em;
   padding: 2px 5px;
+  color: cadetblue;
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 5px;
-  color: cadetblue;
-  text-decoration: none;
-}
-
-.relacionado-link img {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid #d2d2d2;
-  background-color: #f3f5f6;
-  object-fit: contain;
 }
 
 .relacionado-link:hover {

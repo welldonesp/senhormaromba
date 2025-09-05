@@ -131,19 +131,23 @@ export async function renderPage() {
       // Produtos relacionados
       if (produtoDados.relacionados && produtoDados.relacionados.length > 0) {
         html += '<div class="produto-relacionados">';
-        html += '<span class="relacionados-titulo">👉 Veja também:</span>';
+        html += '<span class="relacionados-titulo">👇 Veja também:</span>';
 
+        html += '<ul class="relacionados-list">';
         html += produtoDados.relacionados.map(r => {
           const rProduto = findProdutoByKey(produtos, r);
           const rTitulo = rProduto?.tit || capitalizeWords(r.replace(/-/g, " "));
           return `
-            <a class="loja-link relacionado-link" 
-              href="#${r}" 
-              onclick="document.getElementById('${r}').scrollIntoView({behavior:'smooth'})">
-              ${rTitulo}
-            </a>
+            <li>
+              <a class="relacionado-link" 
+                href="#${r}" 
+                onclick="document.getElementById('${r}').scrollIntoView({behavior:'smooth'})">
+                ${rTitulo}
+              </a>
+            </li>
           `;
         }).join(' ');
+        html += '</ul>';
 
         html += '</div>';
       }
