@@ -48,21 +48,24 @@
       "desc": "Banco Regulável Prime Revolution: 9 posições para treinar como quiser! <br>Reto, inclinado ou declinado, perfeito pra desenvolvimento de ombro, supino e exercícios variados. <br>Resistente, firme e pronto pra treino pesado! 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1jA9uvm" }
-      ]
+      ],
+      "relacionados": []
     },
     "suporte-agachamento": {
       "tit": "Suporte e Rack de agachamento",
       "desc": "Treine pesado sem se arriscar! <br>Power Rack completo com <b>suporte de proteção reforçado</b> e anilheiro. <br>Agachamento, supino, desenvolvimento com barra, encolhimento de ombro e qualquer carga pesada com total segurança. 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/158BJvB" }
-      ]
+      ],
+      "relacionados": []
     },
     "suporte-flexao-nordica": {
       "tit": "Suporte para Flexão Nórdica",
       "desc": "Treino seguro e confortável! <br>Posicionamento estável, firme e pronto pra você subir de nível no posterior de perna. <br>Prático, resistente e feito pra quem treina pesado!",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/25xfoBQ" }
-      ]
+      ],
+      "relacionados": []
     }
   },
 
@@ -73,7 +76,8 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4mGRlAM" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm" }
-      ]
+      ],
+      "relacionados": []
     },
     "strap-figure-eight": {
       "tit": "Strap Figure Eight - o mais resistente de todos!",
@@ -81,7 +85,27 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/41pBoXa" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1PHYoZN" }
-      ]
+      ],
+      "relacionados": []
+    }
+  },
+
+  "Faixas e Proteção": {
+    "faixa-elastica-joelho-normal": {
+      "tit": "Faixa elástica para joelhos Normal (para todos os níveis)",
+      "desc": "Mais força, mais carga! <br>Estimula a propriocepção, comprime os tecidos e ajuda você a levantar mais peso no agachamento, terra e exercícios de perna. <br>Treine pesado, evolua como um bruto! 💪",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1TxnhyK" }
+      ],
+      "relacionados": ["cinto-custo-beneficio", "magnesio-liquido", "strap-tradicional", "strap-figure-eight"]
+    },
+    "faixa-elastica-joelho-stronger": {
+      "tit": "Faixa elástica para joelhos Stronger (para avançados e cargas extremas)",
+      "desc": "Compressão máxima, carga insana! <br>Menos elasticidade, mais compressão. Ideal para quem já treina pesado e quer levantar cargas ainda maiores no agachamento, terra e exercícios de perna. <br>Só para brutos que querem quebrar limites! 💥💪",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1PyAY5C" }
+      ],
+      "relacionados": ["cinto-custo-beneficio", "magnesio-liquido", "strap-tradicional", "strap-figure-eight"]
     }
   },
 
@@ -92,7 +116,8 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/42bax16" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2JL359P" }
-      ]
+      ],
+      "relacionados": []
     },
     "cinturao-pendurar-pesos": {
       "tit": "Cinturão Brutal para pendurar pesos",
@@ -111,7 +136,8 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HMLSt0" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2Yq1unZ" }
-      ]
+      ],
+      "relacionados": []
     }
   },
 

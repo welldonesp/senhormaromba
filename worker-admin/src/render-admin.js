@@ -25,7 +25,6 @@ function statusEmoji(status) {
 
 function htmlToText(str) {
   if (!str) return '';
-  // substitui <br> por quebra de linha e remove HTML
   return str.replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]*>?/gm, '');
 }
 
@@ -48,7 +47,7 @@ export async function renderAdminPage() {
     <head>
       <meta charset="UTF-8">
       <title>Administração - Produtos Senhor Maromba</title>
-      <link rel="stylesheet" href="${CSS_BASE}style-admin.css?v=6">
+      <link rel="stylesheet" href="${CSS_BASE}style-admin.css?v=7">
       <meta name="robots" content="noindex, nofollow">
     </head>
     <body>
@@ -65,7 +64,6 @@ export async function renderAdminPage() {
           }
         }
 
-        // mesmo fallback do render.js
         function fallbackImg(img) {
           const step = parseInt(img.dataset.fallbackStep || '0', 10);
 
@@ -97,7 +95,7 @@ export async function renderAdminPage() {
       const templateId = `template-${produtoNome}`;
 
       html += `
-        <div class="produto">
+        <div class="produto" id="${produtoNome}">
           <img class="produto-img"
                src="${PRODUTOS_IMG_BASE}${produtoNome}.webp"
                data-src-webp="${PRODUTOS_IMG_BASE}${produtoNome}.webp"
@@ -138,7 +136,7 @@ ${youtubeTemplate(produtoNome, titulo, descricao, produtoDados.lojas)}
 
       html += `</table>`;
 
-      // Produtos relacionados
+      // Produtos relacionados com links âncora
       if (produtoDados.relacionados && produtoDados.relacionados.length > 0) {
         html += `<div class="produto-relacionados"><strong>Relacionados:</strong><ul>`;
         for (const r of produtoDados.relacionados) {
@@ -152,7 +150,7 @@ ${youtubeTemplate(produtoNome, titulo, descricao, produtoDados.lojas)}
           if (!rTitulo) {
             rTitulo = capitalizeWords(r.replace(/-/g, " "));
           }
-          html += `<li>${r} (${rTitulo})</li>`;
+          html += `<li><a href="#${r}">${rTitulo}</a></li>`;
         }
         html += `</ul></div>`;
       }
