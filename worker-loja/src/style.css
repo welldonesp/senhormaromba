@@ -131,6 +131,43 @@ footer a {
   object-fit: contain;
 }
 
+.produto-relacionados {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.relacionados-titulo {
+  font-weight: bold;
+  color: #f1bf00;
+  margin-right: 5px;
+}
+
+.relacionado-link {
+  font-size: 1em;
+  padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: cadetblue;
+  text-decoration: none;
+}
+
+.relacionado-link img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #d2d2d2;
+  background-color: #f3f5f6;
+  object-fit: contain;
+}
+
+.relacionado-link:hover {
+  text-decoration: underline;
+}
+
 /* ==== MODAL ==== */
 .modal {
   display: none;

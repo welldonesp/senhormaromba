@@ -121,20 +121,24 @@ export async function renderPage() {
 
       html += `</div>`;
 
-      // Produtos relacionados
-      if (produtoDados.relacionados && produtoDados.relacionados.length > 0) {
-        html += '<div class="produto-relacionados">Veja também: ';
-        html += produtoDados.relacionados.map(r => {
-          // Tenta achar produto na mesma seção, senão usa o próprio nome
-          let rProduto = secaoProdutos[r] || Object.values(produtos).flatMap(s => s[r])[0];
-          const rTitulo = rProduto?.tit || capitalizeWords(r.replace(/-/g, " "));
-          return `<a href="#${r}" onclick="document.getElementById('${r}').scrollIntoView({behavior:'smooth'})">${rTitulo}</a>`;
-        }).join(', ');
-        html += '</div>';
-      }
+  // Produtos relacionados
+  if (produtoDados.relacionados && produtoDados.relacionados.length > 0) {
+    html += '<div class="produto-relacionados">';
+    html += '<span class="relacionados-titulo">👉 Veja também:</span>';
 
-      html += `</div></div></div>`;
-    }
+    html += produtoDados.relacionados.map(r => {
+      let rProduto = secaoProdutos[r] || Object.values(produtos).flatMap(s => s[r])[0];
+      const rTitulo = rProduto?.tit || capitalizeWords(r.replace(/-/g, " "));
+      return `
+        <a class="loja-link relacionado-link" 
+          href="#${r}" 
+          onclick="document.getElementById('${r}').scrollIntoView({behavior:'smooth'})">
+          <img src="${ASSETS_BASE}/icones/relacionado.png" alt="Relacionado">${rTitulo}
+        </a>
+      `;
+    }).join(' ');
+
+    html += '</div>';
   }
 
   html += `
