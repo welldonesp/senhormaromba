@@ -87,8 +87,8 @@
 
   "Cintos": {
     "cinto-custo-beneficio": {
-      "tit": "Cinto custo-benefício",
-      "desc": "A qualidade desse cinto impressiona muito pelo preço que é cobrado. <br>Possui apoio para a lombar, protege a coluna e mantém a postura firme sob grande esforço. <br>Cumpre o que promete!",
+      "tit": "Cinto de Treino Custo-Benefício",
+      "desc": "Protege sua lombar no agachamento, levantamento terra e qualquer carga pesada. <br>Postura firme, coluna segura e apoio brutal sem gastar muito. <br>Cumpre o que promete, e promete muito! 💪",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/42bax16" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2JL359P" }
@@ -106,7 +106,7 @@
   "Luvas": {
     "luvas-treino-premium": {
       "tit": "Luvas de Treino Premium",
-      "desc": "Proteção extra e melhor aderência.",
+      "desc": "Proteção insana, pegada firme e conforto até nos treinos mais pesados. <br>Neoprene + couro reforçado = alta durabilidade. <br>Punho com suporte, velcro de qualidade e costura resistente. <br>Mais segurança, mais aderência, mais carga! 💪",
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HMLSt0" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2Yq1unZ" }
