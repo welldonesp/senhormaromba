@@ -20,6 +20,14 @@ function stripHTML(str) {
   return str ? str.replace(/<[^>]*>?/gm, '') : '';
 }
 
+// Função para encontrar produto em qualquer seção
+function findProdutoByKey(produtos, key) {
+  for (const secao of Object.values(produtos)) {
+    if (secao[key]) return secao[key];
+  }
+  return null;
+}
+
 export async function renderPage() {
   const produtos = await getProdutos();
 
@@ -49,7 +57,7 @@ export async function renderPage() {
         gtag('config', 'G-20QTN1YSP8');
       </script>      
 
-      </head>
+    </head>
     <body>
       <div class="header">
         <img src="${ASSETS_BASE}/logotipo.png" alt="Logotipo Senhor Maromba" class="logo">
@@ -70,7 +78,6 @@ export async function renderPage() {
       const lojasAtivas = produtoDados.lojas.filter(l => l.status === "0" || l.status === "1");
       if (lojasAtivas.length === 0) continue;
 
-      // usa tit se existir, senão fallback para nomeFormatado
       const nomeFormatado = capitalizeWords(produtoNome.replace(/-/g, " "));
       const titulo = produtoDados.tit || nomeFormatado;
       const descricao = produtoDados.desc || '';
@@ -127,12 +134,13 @@ export async function renderPage() {
         html += '<span class="relacionados-titulo">👉 Veja também:</span>';
 
         html += produtoDados.relacionados.map(r => {
-          let rProduto = secaoProdutos[r] || Object.values(produtos).flatMap(s => s[r])[0];
+          const rProduto = findProdutoByKey(produtos, r);
           const rTitulo = rProduto?.tit || capitalizeWords(r.replace(/-/g, " "));
           return `
             <a class="loja-link relacionado-link" 
               href="#${r}" 
-              onclick="document.getElementById('${r}').scrollIntoView({behavior:'smooth'})">${rTitulo}
+              onclick="document.getElementById('${r}').scrollIntoView({behavior:'smooth'})">
+              ${rTitulo}
             </a>
           `;
         }).join(' ');
