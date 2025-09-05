@@ -53,14 +53,14 @@ th {
   margin-top: 12px;
   padding: 10px;
   background: #f9f9f9;
-  border-left: 4px solid #0073e6;
+  border-left: 4px solid #e60000;
   border-radius: 4px;
 }
 
 .produto-relacionados strong {
   display: block;
   margin-bottom: 6px;
-  color: #0073e6;
+  color: #e60000;
 }
 
 .produto-relacionados ul {
