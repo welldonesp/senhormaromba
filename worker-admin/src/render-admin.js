@@ -136,7 +136,28 @@ ${youtubeTemplate(produtoNome, titulo, descricao, produtoDados.lojas)}
         `;
       }
 
-      html += `</table></div></div>`;
+      html += `</table>`;
+
+      // Produtos relacionados
+      if (produtoDados.relacionados && produtoDados.relacionados.length > 0) {
+        html += `<div class="produto-relacionados"><strong>Relacionados:</strong><ul>`;
+        for (const r of produtoDados.relacionados) {
+          let rTitulo = '';
+          for (const [_, secao] of Object.entries(produtos)) {
+            if (secao[r]) {
+              rTitulo = secao[r].tit || capitalizeWords(r.replace(/-/g, " "));
+              break;
+            }
+          }
+          if (!rTitulo) {
+            rTitulo = capitalizeWords(r.replace(/-/g, " "));
+          }
+          html += `<li>${r} (${rTitulo})</li>`;
+        }
+        html += `</ul></div>`;
+      }
+
+      html += `</div></div>`;
     }
   }
 

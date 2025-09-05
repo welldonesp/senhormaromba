@@ -48,3 +48,28 @@ th {
   background: #f1f1f1;
   text-align: left;
 }
+
+.produto-relacionados {
+  margin-top: 12px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-left: 4px solid #0073e6;
+  border-radius: 4px;
+}
+
+.produto-relacionados strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #0073e6;
+}
+
+.produto-relacionados ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.produto-relacionados li {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
