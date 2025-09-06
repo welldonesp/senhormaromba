@@ -209,7 +209,7 @@
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/17GGqBm" }
       ],
-      "relacionados": []
+      "relacionados": ["gancho-s", "cinturao-pendurar-pesos"]
     },
     "rolo-de-massagem-e-liberacao-miofascial": {
       "tit": "Rolo de massagem e Liberação Miofascial",

@@ -57,7 +57,7 @@ export async function renderPage() {
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-      <link rel="stylesheet" href="${CSS_BASE}style.css?v=${DATE_UPDATED}4">
+      <link rel="stylesheet" href="${CSS_BASE}style.css?v=${DATE_UPDATED}5">
 
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-20QTN1YSP8"></script>
