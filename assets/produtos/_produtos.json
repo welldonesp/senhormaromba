@@ -36,6 +36,22 @@
       ],
       "relacionados": []
     },
+    "barra-w": {
+      "tit": "Barra em W maciça",
+      "desc": "1,20 em puro aço maciço cromado, que suporta até <b>300kg</b>! <br>Design em W para pegada ergonômica, frisos antiderrapantes e anéis de proteção. <br>Sem rosca: muito mais agilidade na troca de anilhas, ideal para treinos intensos com intervalos curtos. <br>⚠️ Use com presilhas lock e garanta segurança total. <br>Essa barra vai deixar seu bíceps estourando, levará seus tríceps ao limite. <br>Treino pesado pede barra de respeito. Essa aqui não te deixa na mão. 💪",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/33LTkko" }
+      ],
+      "relacionados": ["presilha-lock-press"]
+    },
+    "barra-w-rosca": {
+      "tit": "Barra em W maciça com Rosca",
+      "desc": "1,20 em puro aço maciço cromado, que suporta até <b>300kg</b>! <br>Design em W para pegada ergonômica, frisos antiderrapantes e anéis de proteção. <br>Com a rosca de segurança, sem risco de anilha voar no meio rosca direta! <br>Essa barra vai deixar seu bíceps estourando, levará seus tríceps ao limite. <br>Treino pesado pede barra de respeito. Essa aqui não te deixa na mão. 💪",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1dYarwS" }
+      ],
+      "relacionados": []
+    },
     "barra-hexagonal": {
       "tit": "Barra Hexagonal com Ponteira Standard",
       "desc": "Performance e segurança máxima! <br>Perfeita para agachamento, levantamento terra, agachamento búlgaro e encolhimento de ombros. <br>Treine pesado com confiança e controle total! 💪",
@@ -50,7 +66,7 @@
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/18NdB2A" }
       ],
-      "relacionados": ["barra-reta-2-metros", "barra-hexagonal"]
+      "relacionados": ["barra-reta-2-metros", "barra-w", "barra-hexagonal"]
     }
 
 
