@@ -23,6 +23,12 @@ h1, h2 {
   height: auto;
 }
 
+.data-atualizacao {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
 .produto {
   margin-bottom: 20px;
   padding: 0px 0px 10px 20px;

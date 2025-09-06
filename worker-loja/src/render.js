@@ -3,6 +3,11 @@ const ASSETS_BASE = BASE + 'assets';
 const CSS_BASE = BASE + 'worker-loja/src/';
 const PRODUTOS_URL = `${ASSETS_BASE}/produtos/_produtos.json`;
 
+const PAGE_TITLE = 'Loja Senhor Maromba';
+const PAGE_SLOGAN = 'Produtos para quem treina sério. 💪';
+const PAGE_URL = 'https://loja.senhormaromba.com.br/';
+const DATE_UPDATED = '2025-09-06';
+
 import { redirect, normalizeLoja, getProdutos } from '../../shared/redirect.js';
 
 function capitalizeWords(str) {
@@ -30,6 +35,7 @@ function findProdutoByKey(produtos, key) {
 
 export async function renderPage() {
   const produtos = await getProdutos();
+  const produtosSchema = [];
 
   let html = `
     <!DOCTYPE html>
@@ -39,7 +45,7 @@ export async function renderPage() {
       <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
       <meta name="description" content="Pare de gastar com produtos ruins! Loja Senhor Maromba tem tudo para musculação testado de verdade. Compre agora!">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Loja Senhor Maromba</title>
+      <title>${PAGE_TITLE}</title>
 
       <!-- FAVICONS -->
       <link rel="icon" href="/favicon.ico" sizes="any">
@@ -55,15 +61,28 @@ export async function renderPage() {
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-20QTN1YSP8');
-      </script>      
+      </script>
 
+      <!-- JSON-LD WebPage -->
+      <script type="application/ld+json">
+        ${JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": PAGE_TITLE,
+          "url": PAGE_URL,
+          "description": PAGE_SLOGAN,
+          "dateModified": DATE_UPDATED,
+          "mainEntity": produtosSchema
+        }, null, 2)}
+      </script>
     </head>
     <body>
       <div class="header">
-        <img src="${ASSETS_BASE}/logotipo.png" alt="Logotipo Senhor Maromba" class="logo">
-        <h1>Loja Senhor Maromba 🔥</h1>
+        <img src="${ASSETS_BASE}/logotipo.png" alt="Logotipo ${PAGE_TITLE}" class="logo">
+        <h1>${PAGE_TITLE} 🔥</h1>
       </div>
-      Produtos para quem treina sério. 💪
+      ${PAGE_SLOGAN}
+      <p class="data-atualizacao">Última atualização: ${DATE_UPDATED}</p>
   `;
 
   for (const [secaoNome, secaoProdutos] of Object.entries(produtos)) {
@@ -147,7 +166,6 @@ export async function renderPage() {
           `;
         }).join(' ');
         html += '</ul>';
-
         html += '</div>';
       }
 
@@ -158,8 +176,8 @@ export async function renderPage() {
         "name": titulo,
         "image": [`${ASSETS_BASE}/produtos/${produtoNome}.webp`],
         "description": descricaoAlt,
-        "category": secaoNome, // Categoria para o Google, mesmo que diferente do título exibido
-        "itemCondition": "https://schema.org/NewCondition", // Produto novo
+        "category": secaoNome,
+        "itemCondition": "https://schema.org/NewCondition",
         "offers": lojasAtivas.map(l => ({
           "@type": "Offer",
           "url": redirect(produtoNome, l.loja),
@@ -171,6 +189,9 @@ export async function renderPage() {
           "name": "Senhor Maromba"
         }
       };
+
+      // Adiciona no array de schemas da página
+      produtosSchema.push(schemaProduto);
 
       html += `
         <script type="application/ld+json">
@@ -193,24 +214,22 @@ export async function renderPage() {
       <br>
       Todos os links são afiliados.<br>
       Sua compra apoia meu conteúdo! 🙌<br>
+      <small>Última atualização: ${DATE_UPDATED}</small>
     </footer>
 
     <script>
       function fallbackImg(img) {
         const step = parseInt(img.dataset.fallbackStep || '0', 10);
-
         if (step === 0 && img.dataset.srcPng) {
           img.dataset.fallbackStep = '1';
           img.src = img.dataset.srcPng;
           return;
         }
-
         if (step === 1 && img.dataset.srcJpg) {
           img.dataset.fallbackStep = '2';
           img.src = img.dataset.srcJpg;
           return;
         }
-
         img.onerror = null;
         img.src = '${ASSETS_BASE}/produtos/placeholder.png';
       }
@@ -220,11 +239,7 @@ export async function renderPage() {
         const modalImg = document.getElementById('modalImg');
         let src;
         if (!elOrSrc) return;
-        if (typeof elOrSrc === 'string') {
-          src = elOrSrc;
-        } else {
-          src = elOrSrc.currentSrc || elOrSrc.src;
-        }
+        src = typeof elOrSrc === 'string' ? elOrSrc : elOrSrc.currentSrc || elOrSrc.src;
         modalImg.src = src;
         modalImg.alt = '';
         modal.style.display = 'block';
