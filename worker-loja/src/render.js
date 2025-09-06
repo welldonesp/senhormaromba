@@ -219,7 +219,7 @@ export async function renderPage() {
       <br>
       Todos os links são afiliados.<br>
       Sua compra apoia meu conteúdo! 🙌<br>
-      <small>Última atualização: ${DATE_UPDATED}</small>
+      <p class="data-atualizacao">Última atualização: ${formatDatePTBR(DATE_UPDATED)}</p>
     </footer>
 
     <script>
