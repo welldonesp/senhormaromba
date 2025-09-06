@@ -42,7 +42,7 @@
 
   },
 
-  "Equipamentos": {
+  "Bancos e Suportes": {
     "banco-regulavel": {
       "tit": "Banco regulável",
       "desc": "Banco Regulável Prime Revolution: 9 posições para treinar como quiser! <br>Reto, inclinado ou declinado, perfeito pra desenvolvimento de ombro, supino e exercícios variados. <br>Resistente, firme e pronto pra treino pesado! 💪",
@@ -66,6 +66,27 @@
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/25xfoBQ" }
       ],
       "relacionados": []
+    }
+  },
+
+  "Puxadores": {
+    "puxador-corda-triceps": {
+      "tit": "Puxador de Corda para Tríceps",
+      "desc": "Se o peso é pesado, essa corda aguenta! <br>Nylon reforçado + aço cromado, <b>suporta até 250 kg sem chorar</b>. <br>Use para tríceps, bíceps, costas e ombros. <br>Chega de puxador frágil, aqui é treino de verdade, é carga alta, é resultado! 💪",
+      "lojas": [
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3I06D4A" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2P6JhAm" }
+      ],
+      "relacionados": ["gancho-s", "suporte-anilhas-puxador"]
+    },
+    "suporte-anilhas-puxador": {
+      "tit": "Puxador de Corda para Tríceps + Mosquetão",
+      "desc": "Coloque carga de verdade no seu pulley! <br> Compacto e resistente, feito em ferro, com 30 cm de comprimento e 2,5 cm de largura. <br>Oficialmente suporta até <b>100 kg</b>, mas na prática aguenta muito mais. O limite é o mosquetão. <br>💡 Dica maromba: combine esse suporte com o <b>gancho em S de aço inox</b> e você vai colocar peso de verdade no puxador, sem medo de arrebentar. <br>Treino pesado, resultado garantido! 💪",
+      "lojas": [
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3I06D4A" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2P6JhAm" }
+      ],
+      "relacionados": ["gancho-s", "puxador-corda-triceps"]
     }
   },
 
