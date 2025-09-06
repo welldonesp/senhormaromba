@@ -95,6 +95,14 @@
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1P1V9c7" }
       ],
       "relacionados": ["gancho-s", "puxador-corda-triceps"]
+    },
+    "corda-polipropileno-10mm": {
+      "tit": "Corda de Polipropileno 10mm",
+      "desc": "Treino Pesado em Casa! <br>Combine com <b>roldana, gancho em S e suporte de anilhas</b> e levante peso pesado sem academia! <br>Sistema caseiro, bruto, resistente e pronto pra suportar até <b>200 kg</b>. <br>Treine pesado, do jeito que só maromba raiz treina! 💪",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2j5jSsD" }
+      ],
+      "relacionados": ["roldana-puxador-caseiro", "gancho-s", "suporte-anilhas-puxador", "puxador-corda-triceps"]
     }
   },
 
