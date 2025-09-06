@@ -151,6 +151,33 @@ export async function renderPage() {
         html += '</div>';
       }
 
+      // JSON-LD Schema.org com todas as lojas ativas
+      const schemaProduto = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": titulo,
+        "image": [`${ASSETS_BASE}/produtos/${produtoNome}.webp`],
+        "description": descricaoAlt,
+        "category": secaoNome, // Categoria para o Google, mesmo que diferente do título exibido
+        "itemCondition": "https://schema.org/NewCondition", // Produto novo
+        "offers": lojasAtivas.map(l => ({
+          "@type": "Offer",
+          "url": redirect(produtoNome, l.loja),
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock"
+        })),
+        "brand": {
+          "@type": "Brand",
+          "name": "Senhor Maromba"
+        }
+      };
+
+      html += `
+        <script type="application/ld+json">
+          ${JSON.stringify(schemaProduto, null, 2)}
+        </script>
+      `;
+
       html += `</div></div></div>`;
     }
   }

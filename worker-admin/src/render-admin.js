@@ -47,8 +47,14 @@ export async function renderAdminPage() {
     <head>
       <meta charset="UTF-8">
       <title>Administração - Produtos Senhor Maromba</title>
+      <!-- FAVICONS -->
+      <link rel="icon" href="/favicon.ico" sizes="any">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
       <link rel="stylesheet" href="${CSS_BASE}style-admin.css?v=7">
       <meta name="robots" content="noindex, nofollow">
+
     </head>
     <body>
       <h1>Administração - Produtos Senhor Maromba</h1>
