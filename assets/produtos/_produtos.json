@@ -6,7 +6,8 @@
       "desc": "Treine pesado ao extremo! <br> Aumente a carga <b>apenas 500 g ou 1 kg</b> e leve cada repetição ao limite. <br>Perfeito pra elevação lateral, agachamento, supino e levantamento terra com evolução contínua!",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1Mby9Lu" }
-      ]
+      ],
+      "relacionados": []
     },
     "anilha-20-kg-ferro-fundido": {
       "tit": "Anilha de 20 kg em ferro fundido",
@@ -14,7 +15,8 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/45Kr8LG" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2QU8roD" }
-      ]
+      ],
+      "relacionados": []
     },
     "barra-reta-2-metros": {
       "tit": "Barra reta maciça com 2 metros",
@@ -22,7 +24,8 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4ngwkwN" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2PLyWeE" }
-      ]
+      ],
+      "relacionados": ["presilha-lock-press"]
     },
     "barra-halter-roscavel": {
       "tit": "2 barras de halter roscável",
@@ -30,21 +33,24 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4ngwkwN" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/22Fh3LZ" }
-      ]
+      ],
+      "relacionados": []
     },
     "barra-hexagonal": {
       "tit": "Barra Hexagonal com Ponteira Standard",
       "desc": "Performance e segurança máxima! <br>Perfeita para agachamento, levantamento terra, agachamento búlgaro e encolhimento de ombros. <br>Treine pesado com confiança e controle total! 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/32eGKAN" }
-      ]
+      ],
+      "relacionados": ["presilha-lock-press"]
     },
     "presilha-lock-press": {
       "tit": "Par de presilhas Lock Press",
-      "desc": "Praticidade para treino com barras standard. <br>⚠️ Importante: não usar em halteres. <br>Para sua segurança, apenas use halteres com rosca!",
+      "desc": "Praticidade para treino com barras standard. <br>⚠️ <b>Importante: não usar em halteres.<b> <br>Para sua segurança, apenas use halteres com rosca!",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/18NdB2A" }
-      ]
+      ],
+      "relacionados": ["barra-reta-2-metros", "barra-hexagonal"]
     }
 
 
