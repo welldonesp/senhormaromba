@@ -57,7 +57,7 @@
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/158BJvB" }
       ],
-      "relacionados": []
+      "relacionados": ["chumbador-parabolt"]
     },
     "suporte-flexao-nordica": {
       "tit": "Suporte para Flexão Nórdica",
@@ -258,6 +258,14 @@
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/17GGqBm" }
       ],
       "relacionados": ["gancho-s", "cinturao-pendurar-pesos"]
+    },
+    "chumbador-parabolt": {
+      "tit": "Chumbador Parabolt 1/4 \"X 2\"",
+      "desc": "Caixa com 25 peças de aço zincado, com rosca 1/4\" e 2\" de comprimento. <br> Equipamento firme é <b>fundamental</b>: sem fixação sólida, não tem treino decente! <br>Ideal para <b>instalar barra fixa, suportes e multifuncionais</b> com total segurança. <br>Alta resistência e fácil instalação. Treine pesado sem medo de equipamento bamba! 💪",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/17GGqBm" }
+      ],
+      "relacionados": ["suporte-agachamento", "barra-fixa-multifuncional-7-em-1"]
     },
     "rolo-de-massagem-e-liberacao-miofascial": {
       "tit": "Rolo de massagem e Liberação Miofascial",
