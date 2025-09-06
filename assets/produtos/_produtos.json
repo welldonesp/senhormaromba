@@ -77,7 +77,7 @@
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4mGRlAM" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2fU4MVm" }
       ],
-      "relacionados": []
+      "relacionados": ["magnesio-liquido", "cinto-custo-beneficio"]
     },
     "strap-figure-eight": {
       "tit": "Strap Figure Eight - o mais resistente de todos!",
@@ -86,7 +86,7 @@
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/41pBoXa" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1PHYoZN" }
       ],
-      "relacionados": []
+      "relacionados": ["magnesio-liquido", "cinto-custo-beneficio"]
     }
   },
 
