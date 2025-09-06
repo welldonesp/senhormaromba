@@ -117,7 +117,7 @@
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/42bax16" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2JL359P" }
       ],
-      "relacionados": []
+      "relacionados": ["faixa-elastica-joelho-normal", "faixa-elastica-joelho-stronger", "magnesio-liquido", "strap-tradicional", "strap-figure-eight"]
     },
     "cinturao-pendurar-pesos": {
       "tit": "Cinturão Brutal para pendurar pesos",
@@ -148,21 +148,24 @@
       "lojas": [
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4p2nuUT"},
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1sXjjZk" }
-      ]
+      ],
+      "relacionados": ["creatina-darklab"]
     },
     "coqueteleira-darklab": {
       "tit": "Coqueleteira Dark Lab",
       "desc": "Essa Coqueteleira/Shaker tem 700ml. Misture seus suplementos na hora e em qualquer lugar! <br>Praticidade, resistência e capacidade de verdade pra quem treina pesado!",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2MPhKTb" }
-      ]
+      ],
+      "relacionados": ["creatina-darklab"]
     },
     "creatina-darklab": {
       "tit": "Creatina 600g Dark Lab",
       "desc": "Creatina Monohidratada Pura 600g Dark Lab Unidade<br>Para quem leva suplementação a sério! <br>Compre agora a sua creatina custo-benefício diretamente da loja oficial Dark Lab no Mercado Livre, sem perder tempo! <br>Não espere ela acabar...",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1KhXNkj" }
-      ]
+      ],
+      "relacionados": ["balanca-de-precisao", "coqueteleira-darklab"]
     }
   },
 
@@ -174,7 +177,7 @@
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HSQTQL"},
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1SwaLJf" }
       ],
-      "relacionados": []
+      "relacionados": ["strap-tradicional", "strap-figure-eight"]
     },
     "step-eva": {
       "tit": "Step Eva C90 X L28 X A14",

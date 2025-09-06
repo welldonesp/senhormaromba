@@ -25,6 +25,11 @@ function stripHTML(str) {
   return str ? str.replace(/<[^>]*>?/gm, '') : '';
 }
 
+function formatDatePTBR(dateStr) {
+  const [year, month, day] = dateStr.split('-');
+  return `${day}/${month}/${year}`;
+}
+
 // Função para encontrar produto em qualquer seção
 function findProdutoByKey(produtos, key) {
   for (const secao of Object.values(produtos)) {
@@ -52,7 +57,7 @@ export async function renderPage() {
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-      <link rel="stylesheet" href="${CSS_BASE}style.css?v=17">
+      <link rel="stylesheet" href="${CSS_BASE}style.css?v=${DATE_UPDATED}1">
 
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-20QTN1YSP8"></script>
@@ -82,7 +87,7 @@ export async function renderPage() {
         <h1>${PAGE_TITLE} 🔥</h1>
       </div>
       ${PAGE_SLOGAN}
-      <p class="data-atualizacao">Última atualização: ${DATE_UPDATED}</p>
+      <p class="data-atualizacao">Última atualização: ${formatDatePTBR(DATE_UPDATED)}</p>
   `;
 
   for (const [secaoNome, secaoProdutos] of Object.entries(produtos)) {
