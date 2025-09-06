@@ -77,14 +77,14 @@
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3I06D4A" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2P6JhAm" }
       ],
-      "relacionados": ["gancho-s", "suporte-anilhas-puxador"]
+      "relacionados": ["suporte-anilhas-puxador", "gancho-s"]
     },
     "suporte-anilhas-puxador": {
-      "tit": "Puxador de Corda para Tríceps + Mosquetão",
-      "desc": "Coloque carga de verdade no seu pulley! <br> Compacto e resistente, feito em ferro, com 30 cm de comprimento e 2,5 cm de largura. <br>Oficialmente suporta até <b>100 kg</b>, mas na prática aguenta muito mais. O limite é o mosquetão. <br>💡 Dica maromba: combine esse suporte com o <b>gancho em S de aço inox</b> e você vai colocar peso de verdade no puxador, sem medo de arrebentar. <br>Treino pesado, resultado garantido! 💪",
+      "tit": "Suporte de anilhas para puxador",
+      "desc": "Esquece o limite de 100 kg. Esse suporte aguenta muito mais! <br>O limite é o mosquetão. Se você usar o <b>gancho em S de aço inox</b>, dá pra encher de peso sem dó! <br>Puxador turbinado, treino insano! 💪",
       "lojas": [
-        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3I06D4A" },
-        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2P6JhAm" }
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4g8yIDb" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1P1V9c7" }
       ],
       "relacionados": ["gancho-s", "puxador-corda-triceps"]
     }
