@@ -106,6 +106,18 @@
     }
   },
 
+  "Multifuncionais e Paralelas": {
+    "barra-fixa-multifuncional-7-em-1": {
+      "tit": "Barra Fixa Multifuncional 7 em 1",
+      "desc": "Treino Completo em Casa! <br> Treine pesado em qualquer lugar: muscle up, barra fixa pronada, supinada, neutra, paralelas e abdominal. <br>💪 Eu uso o <b>suporte para saco de boxe</b> e transformo essa barra num <b>pulley caseiro</b>, levantando peso pesado sem depender de academia. <br> Compacta, resistente e versátil. Aguenta <b>150 kg de carga</b>. <br>Equipamento original Fitness Prado, com patente registrada, tubos redondos e suportes cromados. <br>Recuse imitações fracas!",
+      "lojas": [
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3I06D4A" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2Lnjqpd" }
+      ],
+      "relacionados": ["suporte-anilhas-puxador", "gancho-s", "roldana-puxador-caseiro", "puxador-corda-triceps", "corda-polipropileno-10mm"]
+    }
+  },
+
   "Straps": {
     "strap-tradicional": {
       "tit": "Strap Tradicional",
