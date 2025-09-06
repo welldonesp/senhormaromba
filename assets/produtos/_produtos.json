@@ -38,7 +38,15 @@
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/32eGKAN" }
       ]
+    },
+    "presilha-lock-press": {
+      "tit": "Par de presilhas Lock Press",
+      "desc": "Praticidade para treino com barras standard. <br>⚠️ Importante: não usar em halteres. <br>Para sua segurança, apenas use halteres com rosca!",
+      "lojas": [
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/18NdB2A" }
+      ]
     }
+
 
   },
 
