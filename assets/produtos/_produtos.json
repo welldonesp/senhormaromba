@@ -38,7 +38,7 @@
     },
     "barra-w": {
       "tit": "Barra em W maciça",
-      "desc": "1,20 em puro aço maciço cromado, que suporta até <b>300kg</b>! <br>Design em W para pegada ergonômica, frisos antiderrapantes e anéis de proteção. <br>Sem rosca: muito mais agilidade na troca de anilhas, ideal para treinos intensos com intervalos curtos. <br>⚠️ Use com presilhas lock e garanta segurança total. <br>Essa barra vai deixar seu bíceps estourando, levará seus tríceps ao limite. <br>Treino pesado pede barra de respeito. Essa aqui não te deixa na mão. 💪",
+      "desc": "1,20 em puro aço maciço cromado, que suporta até <b>300kg</b>! <br>Design em W para pegada ergonômica, frisos antiderrapantes e anéis de proteção. <br>Sem rosca: muito mais agilidade na troca de anilhas, ideal para treinos intensos com intervalos curtos. <br>⚠️ Use com presilhas lock e garanta segurança total. <br>Essa barra vai deixar seu bíceps estourando e levará seus tríceps ao limite. <br>Treino pesado pede barra de respeito. Essa aqui não te deixa na mão. 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/33LTkko" }
       ],
@@ -46,7 +46,7 @@
     },
     "barra-w-rosca": {
       "tit": "Barra em W maciça com Rosca",
-      "desc": "1,20 em puro aço maciço cromado, que suporta até <b>300kg</b>! <br>Design em W para pegada ergonômica, frisos antiderrapantes e anéis de proteção. <br>Com a rosca de segurança, sem risco de anilha voar no meio rosca direta! <br>Essa barra vai deixar seu bíceps estourando, levará seus tríceps ao limite. <br>Treino pesado pede barra de respeito. Essa aqui não te deixa na mão. 💪",
+      "desc": "1,20 em puro aço maciço cromado, que suporta até <b>300kg</b>! <br>Design em W para pegada ergonômica, frisos antiderrapantes e anéis de proteção. <br>Com a rosca de segurança, sem risco de anilha voar no meio rosca direta! <br>Essa barra vai deixar seu bíceps estourando e levará seus tríceps ao limite. <br>Treino pesado pede barra de respeito. Essa aqui não te deixa na mão. 💪",
       "lojas": [
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1dYarwS" }
       ],
@@ -165,6 +165,18 @@
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1PHYoZN" }
       ],
       "relacionados": ["magnesio-liquido", "cinto-custo-beneficio"]
+    }
+  },
+
+  "Treino Antebraços": {
+    "rolo-punho": {
+      "tit": "Rolo de Punho (Wrist Roller)",
+      "desc": "Quer punho de ferro e antebraço estourando? O rolo de punho é o equipamento que não pode faltar no treino raiz. <br>✅ Construção sólida em aço com alça de PVC antiderrapante. <br>✅ Inclui tiras de náilon, gancho, presilha e pino com encaixe de segurança. <br>✅ Compatível com todas as anilhas padrão. <br>✅ Corda de 1 metro para trabalhar com amplitude máxima. <br>✅ Portátil: leva pra casa, academia ou até pro escritório. <br>💪 Use para: <br>- Treinar punho e antebraço. <br>- Reabilitação. <br>- Esportes que exigem força de pegada: Jiu Jitsu, escalada, golfe, ciclismo e muito mais. <br>Treino bruto, direto no antebraço. Puxa, enrola, queima. <br>Esse aqui separa quem só malha de quem é maromba de verdade. 🔥",
+      "lojas": [
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4mGRlAM" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1zHG1fm" }
+      ],
+      "relacionados": ["strap-tradicional", "strap-figure-eight", "magnesio-liquido"]
     }
   },
 
