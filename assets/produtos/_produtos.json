@@ -9,7 +9,16 @@
       ],
       "relacionados": []
     },
-    "anilha-20-kg-ferro-fundido": {
+    "anilha-5-kg-pintada": {
+      "tit": "Anilha de 5 kg em ferro fundido",
+      "desc": "Resistência e estabilidade! <br>Ao contrário das emborrachadas, que com o tempo rasgam e deixam o metal sem proteção, essas permanecem firmes na barra e duram muito mais. <br>Treine pesado sem se preocupar com as anilhas!",
+      "lojas": [
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/4p8ECsh" },
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2tx8Lzq" }
+      ],
+      "relacionados": []
+    },
+    "anilha-20-kg-pintada": {
       "tit": "Anilha de 20 kg em ferro fundido",
       "desc": "Resistência e estabilidade! <br>Ao contrário das emborrachadas, que com o tempo rasgam e deixam o metal sem proteção, essas permanecem firmes na barra e duram muito mais. <br>Treine pesado sem se preocupar com as anilhas!",
       "lojas": [
