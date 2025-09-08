@@ -294,7 +294,7 @@
         { "status": "1", "loja": "Amazon", "url": "https://amzn.to/3HMLSt0" },
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2Yq1unZ" }
       ],
-      "relacionados": []
+      "relacionados": ["bota-iron-premium"]
     }
   },
 
@@ -323,6 +323,18 @@
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1KhXNkj" }
       ],
       "relacionados": ["balanca-de-precisao", "coqueteleira-darklab"]
+    }
+  },
+
+  "Calçados de Treino": {
+    "bota-iron-premium": {
+      "tit": "Bota de Treino Masculino Iron Premium",
+      "desc": "Treino pesado pede pé firme no chão. Essa bota foi feita pra aguentar carga bruta: <br><b>- Solado flat em borracha natural:</b> não escorrega, dá tração e estabilidade máxima no agachamento. <br><b>- Flexível e resistente:</b> permite fazer elevação na ponta dos pés com amplitude máxima sem abrir as laterais, mantendo o pé firme mesmo com carga brutal. <br><b>- Durável e confortável:</b> couro legítimo premium com nylon respirável. <br><b>- Prática e segura:</b> sem cadarço, só velcro. Calçou, travou, tá pronto pro treino. <br><b>- Suporte brutal:</b> reforço no calcanhar e acolchoamento no tornozelo pra proteger articulações. <br>💪 Perfeita pra agachamentos, panturrilhas, levantamento terra e qualquer treino onde o peso esmaga os pés. <br>Treino raiz, sem frescura, só firmeza no chão e evolução de verdade.",
+      "lojas": [
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/45Tp1VQ"},
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/2R3d6vy" }
+      ],
+      "relacionados": ["luvas-treino-premium", "cinto-custo-beneficio", "faixa-elastica-joelho-normal", "strap-figure-eight", "strap-tradicional"]
     }
   },
 
