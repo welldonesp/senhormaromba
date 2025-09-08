@@ -6,7 +6,7 @@ const PRODUTOS_URL = `${ASSETS_BASE}/produtos/_produtos.json`;
 const PAGE_TITLE = 'Loja Senhor Maromba';
 const PAGE_SLOGAN = 'Produtos para quem treina sério. 💪';
 const PAGE_URL = 'https://loja.senhormaromba.com.br/';
-const DATE_UPDATED = '2025-09-07';
+const DATE_UPDATED = '2025-09-08';
 
 import { redirect, normalizeLoja, getProdutos } from '../../shared/redirect.js';
 
