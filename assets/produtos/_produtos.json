@@ -405,6 +405,15 @@
         { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/1nCUWoD" }
       ],
       "relacionados": []
+    },
+    "piso-borracha100x100x15": {
+      "tit": "Piso de Borracha 1 x 1 metro x 15 mm para Treino Pesado",
+      "desc": "Treino raiz pede chão firme. <br>Esse piso de <b>15mm de espessura</b> segura queda de anilha sem choro, protege o piso de rachaduras e ainda abafa o barulho. <br>- <b>Espessura de respeito</b>: 15mm de proteção real contra impacto bruto. <br>- <b>Aguenta ferro sem dó</b>: queda de barra, halter ou anilha sem estragar o chão. <br>- <b>Antiderrapante</b>: firmeza até no treino mais insano, sem risco de escorregar. <br>- <b>Conforto brutal</b>: reduz impacto nas articulações, ideal pra agachamento, saltos e levantamento pesado. <br>- <b>Durável e consciente</b>: cada m² reaproveita 6 pneus. <br>- <b>Instalação fácil</b>: encaixe, presilha ou cola, em qualquer superfície. <br><br>👉 Ideal pra área de peso livre, home gym raiz ou box funcional.<br>",
+      "lojas": [
+        { "status": "1", "loja": "Amazon", "url": "https://amzn.to/41JDwZT"},
+        { "status": "1", "loja": "Mercado Livre", "url": "https://mercadolivre.com/sec/26A1Uro" }
+      ],
+      "relacionados": []
     }
   }
 }
